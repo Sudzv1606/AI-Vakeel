@@ -1,0 +1,1582 @@
+
+
+ 
+MINISTRY OF LAW AND JUSTICE
+
+(Legislative Department)
+
+New Delhi, the 21st June, 2005/Jyaistha 31, 1927 (Saka)
+
+The following Act of Parliament received the assent of the President on the 15th June, 2005, and is hereby published for general information:—
+
+
+THE RIGHT TO INFORMATION ACT, 2005 No. 22 of 2005
+
+[15th June, 2005.]
+An Act to provide for setting out the practical regime of right to information for citizens to secure access to information under the control of public authorities, in order to promote transparency and accountability in the working of every public authority, the constitution of a Central Information Commission and State Information Commissions and for matters connected therewith or incidental thereto.
+
+WHEREAS the Constitution of India has established democratic Republic;
+
+AND WHEREAS democracy requires an informed citizenry and transparency of information which are vital to its functioning and also to contain corruption and to hold Governments and their instrumentalities accountable to the governed;
+
+AND WHEREAS revelation of information in actual practice is likely to conflict with other public interests including efficient operations of the Governments, optimum use of limited fiscal resources and the preservation of confidentiality of
+sensitive information;
+ 
+2	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+
+
+
+
+	AND WHEREAS it is necessary to harmonise these conflicting interests while preserving the paramountcy of the democratic ideal;
+
+NOW, THEREFORE, it is expedient to provide for furnishing certain information to citizens who desire to have it.
+
+BE it enacted by Parliament in the Fifty-sixth Year of the Republic of India as follows:—
+	CHAPTER I
+
+Preliminary
+Short title, extent and commencemen t	1. (1) This Act may be called the Right to Information Act, 2005.
+
+(2)	It extends to the whole of India except the State of Jammu and Kashmir.
+
+(3)	The provisions of sub-section (1) of section 4, sub-sections (1) and (2) of
+section 5, sections 12, 13, 15,16, 24, 27 and 28 shall come into force at once, and the remaining provisions of this Act shall come into force on the one hundred and twentieth day of its enactment.
+Definitions.	2. In this Act, unless the context otherwise requires,—
+
+(a) "appropriate Government" means in relation to a public authority which is established, constituted, owned, controlled or substantially financed by funds provided directly or indirectly—
+	(i)		by the Central Government or the Union territory administration, the Central Government;
+(ii)	by the State Government, the State Government;
+
+(b)	"Central Information Commission" means the Central Information Commission constituted under sub-section (1) of section 12;
+
+(c)	"Central Public Information Officer" means the Central Public Information Officer designated under sub-section (1) and includes a Central Assistant Public Information Officer designated as such under sub-section (2) of section 5;
+
+(d)	"Chief Information Commissioner" and "Information Commissioner" mean the Chief Information Commissioner and Information Commissioner appointed under sub-section (3) of section 12;
+
+(e)	"competent authority" means—
+
+(i)	the Speaker in the case of the House of the People or the Legislative Assembly of a State or a Union territory having such Assembly and the Chairman in the case of the Council of States or Legislative Council of a State;
+(ii)	the Chief Justice of India in the case of the Supreme Court;
+(iii)	the Chief Justice of the High Court in the case of a High Court;
+(iv)	the President or the Governor, as the case may be, in the case of other authorities established or constituted by or under the Constitution;
+(v)	the administrator appointed under article 239 of the Constitution;
+
+(f)	"information" means any material in any form, including records, documents,
+memos, e-mails, opinions, advices, press releases, circulars, orders, logbooks, contracts, reports, papers, samples, models, data material held in any electronic form
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	3
+
+and information relating to any private body which can be accessed by a public authority under any other law for the time being in force;
+
+(g)	"prescribed" means prescribed by rules made under this Act by the appropriate Government or the competent authority, as the case may be;
+
+
+
+(h)	"public authority" means any authority or body or institution of self-government established or constituted—
+
+(a)	by or under the Constitution;
+(b)	by any other law made by Parliament;
+(c)	by any other law made by State Legislature;
+(d)	by notification issued or order made by the appropriate Government, and includes any—
+(i)	body owned, controlled or substantially financed;
+(ii)	non-Government organisation substantially financed, directly or indirectly by funds provided by the appropriate Government;
+(i)	"record" includes—
+
+(a)	any document, manuscript and file;
+(b)	any microfilm, microfiche and facsimile copy of a document;
+(c)	any reproduction of image or images embodied in such microfilm (whether enlarged or not); and
+(d)	any other material produced by a computer or any other device;
+
+(j)	"right to information" means the right to information accessible under this Act which is held by or under the control of any public authority and includes the right to—
+
+(i)	inspection of work, documents, records;
+(ii)	taking notes, extracts or certified copies of documents or records;
+(iii)	taking certified samples of material;
+(iv)	obtaining information in the form of diskettes, floppies, tapes, video cassettes or in any other electronic mode or through printouts where such information is stored in a computer or in any other device;
+
+(k)	"State Information Commission" means the State Information Commission constituted under sub-section (1) of section 15;
+
+(l)	"State Chief Information Commissioner" and "State Information Commissioner" mean the State Chief Information Commissioner and the State Information Commissioner appointed under sub-section (3) of section 15;
+
+(m)	"State Public Information Officer" means the State Public Information Officer designated under sub-section (1) and includes a State Assistant Public Information Officer designated as such under sub-section (2) of section 5;
+
+(n)	"third party" means a person other than the citizen making a request for information and includes a public authority.
+ 
+4	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+
+CHAPTER II
+
+Right to information and obligations of public authorities	
+3. Subject to the provisions of this Act, all citizens shall have the right to information.	Right to
+information
+4.	(1) Every public authority shall—
+
+a)	maintain all its records duly catalogued and indexed in a manner and the form which facilitates the right to information under this Act and ensure that all records that are appropriate to be computerised are, within a reasonable time and subject to availability of resources, computerised and connected through a network all over the country on different systems so that access to such records is facilitated;
+b)	publish within one hundred and twenty days from the enactment of this Act,—
+
+(i)	the par ticulars of its organisation, functions and duties;
+(ii)	the powers and duties of its officers and employees;
+(iii)	the procedure followed in the decision making process, including channels of supervision and accountability;
+(iv)	the norms set by it for the discharge of its functions;
+(v)	the rules, regulations, instructions, manuals and records, held by it or under its control or used by its employees for discharging its functions;
+(vi)	a statement of the categories of documents that are held by it or under its control;
+(vii)	the particulars of any arrangement that exists for consultation with, or representation by, the members of the public in relation to the formulation of its policy or implementation thereof;
+(viii)	a statement of the boards, councils, committees and other bodies consisting of two or more persons constituted as its part or for the purpose of its advice, and as to whether meetings of those boards, councils, committees and other bodies are open to the public, or the minutes of such meetings are accessible for public;
+(ix)	a directory of its officers and employees;
+(x)	the monthly remuneration received by each of its officers and employees, including the system of compensation as provided in its regulations;
+(xi)	the budget allocated to each of its agency, indicating the particulars of all plans, proposed expenditures and reports on disbursements made;
+(xii)	the manner of execution of subsidy programmes, including the amounts allocated and the details of beneficiaries of such programmes;
+(xiii)	particulars of recipients of concessions, permits or authorisations granted by it;
+(xiv)	details in respect of the information, available to or held by it, reduced in an electronic form;
+(xv)	the particulars of facilities available to citizens for obtaining information, including the working hours of a library or reading room, if maintained for public use;
+(xvi)	the names, designations and other particulars of the Public Information Officers;
+(xvii)	such  other  information  as  may  be  prescribed; and   thereafter   update   these   publications   every   year;
+
+c)		publish all relevant facts while formulating important policies or announcing the decisions which affect public;
+d)	provide reasons for its administrative or quasi-judicial	
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	5
+
+decisions to affected persons.
+
+(2)	It shall be a constant endeavour of every public authority to take steps in accordance with the requirements of clause (b) of sub-section (1) to provide as much information suo motu to the public at regular intervals through various means of communications, including internet, so that the public have minimum resort to the use of this Act to obtain information.
+
+(3)	For the purposes of sub-section (1), every information shall be disseminated widely and in such form and manner which is easily accessible to the public.
+
+(4)	All materials shall be disseminated taking into consideration the cost effectiveness, local language and the most effective method of communication in that local area and the information should be easily accessible, to the extent possible in electronic format with the Central Public Information Officer or State Public Information Officer, as the case may be, available free or at such cost of the medium or the print cost price as may be prescribed.
+
+ 
+Explanation.—For the purposes of sub-sections (3) and (4), "disseminated" means making known or communicated the information to the public through notice boards, newspapers, public announcements, media broadcasts, the internet or any other means, including inspection of offices of any public authority.
+5. (1) Every public authority shall, within one hundred days of the enactment of this Act, designate as many officers as the Central Public Information Officers or State Public Information Officers, as the case may be, in all administrative units or offices under it as may be necessary to provide information to persons requesting for the information under this Act.
+
+(2)	Without prejudice to the provisions of sub-section (1), every public authority shall designate an officer, within one hundred days of the enactment of this Act, at each sub-divisional level or other sub-district level as a Central Assistant Public Information Officer or a State Assistant Public Information Officer, as the case may be, to receive the applications for information or appeals under this Act for forwarding the same forthwith to the Central Public Information Officer or the State Public Information Officer or senior officer specified under sub-section (1) of section 19 or the Central Information Commission or the State Information Commission, as the case may be:
+
+Provided that where an application for information or appeal is given to a Central Assistant Public Information Officer or a State Assistant Public Information Officer, as the case may be, a period of five days shall be added in computing the period for response specified under sub-section (1) of section 7.
+
+(3)	Every Central Public Information Officer or State Public Information Officer, as the case may be, shall deal with requests from persons seeking information and render reasonable assistance to the persons seeking such information.
+
+(4)	The Central Public Information Officer or State Public Information Officer, as the case may be, may seek the assistance of any other officer as he or she considers it necessary for the proper discharge of his or her duties.
+
+(5)	Any officer, whose assistance has been sought under sub-section (4), shall render all assistance to the Central Public Information Officer or State Public Information Officer, as the case may be, seeking his or her assistance and for the purposes of any contravention of the provisions of this Act, such other officer shall be treated as a Central Public Information Officer or State Public Information Officer, as the case may be.
+ 
+
+
+
+
+
+Designation of Public Information Officers.
+ 
+6	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+
+	6.	(1) A person, who desires to obtain any information under this Act, shall make a request in writing or through electronic means in English or Hindi or in the official language of the area in which the application is being made, accompanying such fee as may be prescribed, to—
+
+(a)	the Central Public Information Officer or State Public Information Officer, as the case may be, of the concerned public authority;
+(b)	the Central Assistant Public Information Officer or State Assistant Public Information Officer, as the case may be,
+
+specifying the particulars of the information sought by him or her:
+
+Provided that where such request cannot be made in writing, the Central Public Information Officer or State Public Information Officer, as the case may be, shall render all reasonable assistance to the person making the request orally to reduce the same in writing.
+
+(2)	An applicant making request for information shall not be required to give any reason for requesting the information or any other personal details except those that may be necessary for contacting him.
+
+(3)	Where an application is made to a public authority requesting for an information,—
+
+(i)	which is held by another public authority; or
+(ii)	the subject matter of which is more closely connected with the functions of another public authority,
+
+the public authority, to which such application is made, shall transfer the application or such part of it as may be appropriate to that other public authority and inform the applicant immediately about such transfer:
+
+Provided that the transfer of an application pursuant to this sub-section shall be made
+as soon as practicable but in no case later than five days from the date of receipt of the application.	Request for obtaining information.
+Disposal of request.	7. (1) Subject to the proviso to sub-section (2) of section 5 or the proviso to sub¬section (3) of section 6, the Central Public Information Officer or State Public Information Officer, as the case may be, on receipt of a request undersection 6 shall, as expeditiously as possible, and in any case within thirty days of the receipt of the request, either provide the information on payment of such fee as may be prescribed or reject the request for any of the reasons specified in sections 8 and 9:
+
+Provided that where the information sought for concerns the life or liberty of a person, the same shall be provided within forty-eight hours of the receipt of the request.
+
+(2)	If the Central Public Information Officer or State Public Information Officer, as the case may be, fails to give decision on the request for information within the period specified under sub-section (1), the Central Public Information Officer or State Public Information Officer, as the case may be, shall be deemed to have refused the request.
+
+(3)	Where a decision is taken to provide the information on payment of any further fee representing the cost of providing the information, the Central Public Information Officer or State Public Information Officer, as the case may be, shall send an intimation to the person making the request, giving—
+
+(a)	the details of further fees representing the cost of providing the information as determined by him, together with the calculations made	
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	7
+
+to arrive at the amount in accordance with fee prescribed under sub-section (1), requesting him to deposit that fees, and the period intervening between the despatch of the said intimation and payment of fees shall be excluded for the purpose of calculating the period of thirty days referred to in that sub-section;
+
+(b) information concerning his or her right with respect to review the decision as to the amount of fees charged or the form of access provided, including the particulars of the appellate authority, time limit, process and any other forms.
+
+(4)	Where access to the record or a part thereof is required to be provided under this Act and the person to whom access is to be provided is sensorily disabled, the Central Public Information Officer or State Public Information Officer, as the case may be, shall provide assistance to enable access to the information, including providing such assistance as may be appropriate for the inspection.
+
+(5)	Where access to information is to be provided in the printed or in any electronic format, the applicant shall, subject to the provisions of sub-section (6), pay such fee as may be prescribed:
+
+Provided that the fee prescribed under sub-section (1) of section 6 and sub-sections (1) and (5) of section 7 shall be reasonable and no such fee shall be charged from the persons who are of below poverty line as may be determined by the appropriate Government.
+
+(6)	Notwithstanding anything contained in sub-section (5), the person making request for the information shall be provided the information free of charge where a public authority fails to comply with the time limits specified in sub-section (1).
+
+(7)	Before taking any decision under sub-section (1), the Central Public Information Officer or State Public Information Officer, as the case may be, shall take into consideration the representation made by a third party under section 11.
+
+(8)	Where a request has been rejected under sub-section (1), the Central Public Information Officer or State Public Information Officer, as the case may be, shall communicate to the person making the request,—
+
+(i)	the reasons for such rejection;
+(ii)	the period within which an appeal against such rejection may be preferred; and
+(iii)	the particulars of the appellate authority.
+
+(9)	An information shall ordinarily be provided in the form in which it is sought unless it would disproportionately divert the resources of the public authority or would be detrimental to the safety or preservation of the record in question.
+
+ 
+8.	(1) Notwithstanding anything contained in this Act, there shall be no obligation to give any citizen,—
+
+(a)	information, disclosure of which would prejudicially affect the sovereignty and integrity of India, the security, strategic, scientific or economic interests of the State, relation with foreign State or lead to incitement of an offence;
+
+(b)	information which has been expressly forbidden to be published by any court of law or tribunal or the disclosure of which may constitute contempt of court;
+ 
+Exemption from disclosure of information.
+ 
+8	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+
+	(c)	information, the disclosure of which would cause a breach of privilege of Parliament or the State Legislature;
+
+(d)	information including commercial confidence, trade secrets or intellectual property, the disclosure of which would harm the competitive position of a third party, unless the competent authority is satisfied that larger public interest warrants the disclosure of such information;
+
+(e)	information available to a person in his fiduciary relationship, unless the competent authority is satisfied that the larger public interest warrants the disclosure of such information;
+
+(f)	information received in confidence from foreign Government;
+
+(g)	information, the disclosure of which would endanger the life or physical safety of any person or identify the source of information or assistance given in confidence for law enforcement or security purposes;
+
+(h)	information which would impede the process of investigation or apprehension or prosecution of offenders;
+
+(i)	cabinet papers including records of deliberations of the Council of Ministers, Secretaries and other officers:
+
+Provided that the decisions of Council of Ministers, the reasons thereof, and the material on the basis of which the decisions were taken shall be made public after the decision has been taken, and the matter is complete, or over:
+
+Provided further that those matters which come under the exemptions specified in this section shall not be disclosed;
+
+(j)	information which relates to personal information the disclosure of which has no relationship to any public activity or interest, or which would cause unwarranted invasion of the privacy of the individual unless the Central Public Information Officer or the State Public Information Officer or the appellate authority, as the case may be, is satisfied that the larger public interest justifies the disclosure of such information:
+
+Provided that the information which cannot be denied to the Parliament or a State Legislature shall not be denied to any person.
+
+19 of 1923.	
+(2)	Notwithstanding anything in the Official Secrets Act, 1923 nor any of the exemptions permissible in accordance with sub-section (1), a public authority may allow access to information, if public interest in disclosure outweighs the harm to the protected interests.
+
+(3)	Subject to the provisions of clauses (a), (c) and (i) of sub-section (1), any information relating to any occurrence, event or matter which has taken place, occurred or happened twenty years before the date on which any request is made under secton 6 shall be provided to any person making a request under that section:
+	
+Provided that where any question arises as to the date from which the said period of twenty years has to be computed, the decision of the Central Government shall be final, subject to the usual appeals provided for in this Act.
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	9
+
+Grounds for rejection to access in certain cases.	9. Without prejudice to the provisions of section 8, a Central Public Information Officer or a State Public Information Officer, as the case may be, may reject a request for information where such a request for providing access would involve an infringement of copyright subsisting in a person other than the State.
+Severability	10.	(1) Where a request for access to information is rejected on the ground that it is in relation to information which is exempt from disclosure, then, notwithstanding anything contained in this Act, access may be provided to that part of the record which does not contain any information which is exempt from disclosure under this Act and which can reasonably be severed from any part that contains exempt information.
+
+(2)	Where access is granted to a part of the record under sub-section (1), the Central Public Information Officer or State Public Information Officer, as the case may be, shall give a notice to the applicant, informing—
+
+(a)		that only part of the record requested, after severance of the record containing information which is exempt from disclosure, is being provided;
+(b)		the reasons for the decision, including any findings on any material question of fact, referring to the material on which those findings were based;
+(c)	the name and designation of the person giving the decision;
+(d)		the details of the fees calculated by him or her and the amount of fee which the applicant is required to deposit; and
+(e)		his or her rights with respect to review of the decision regarding non-disclosure of part of the information, the amount of fee charged or the form of access provided, including the particulars of the senior officer specified under sub-section (1) of section 19 or the Central Information Commission or the State Information Commission, as the case may be, time limit, process and any other form of access.
+Third party information.	11. (1) Where a Central Public Information Officer or a State Public Information Officer, as the case may be, intends to disclose any information or record, or part thereof on a request made under this Act, which relates to or has been supplied by a third party and has been treated as confidential by that third party, the Central Public Information Officer or State Public Information Officer, as the case may be, shall, within five days from the receipt of the request, give a written notice to such third party of the request and of the fact that the Central Public Information Officer or State Public Information Officer, as the case may be, intends to disclose the information or record, or part thereof, and invite the third party to make a submission in writing or orally, regarding whether the information should be disclosed, and such submission of the third party shall be kept in view while taking a decision about disclosure of information:
+
+Provided that except in the case of trade or commercial secrets protected by law, disclosure may be allowed if the public interest in disclosure outweighs in importance any possible harm or injury to the interests of such third party.
+
+(2)	Where a notice is served by the Central Public Information Officer or State Public Information Officer, as the case may be, under sub-section (1) to a third party in respect of any information or record or part thereof, the third party shall, within ten days from the date of receipt of such notice, be given the opportunity to make representation against the proposed disclosure.
+
+(3)	Notwithstanding anything contained in section 7, the Central Public Information Officer or State Public Information Officer, as the case may be, shall, within forty days after receipt of the request under section 6, if the third party has been given an opportunity to make representation under sub-section (2), make a decision as
+to whether or not to disclose the information or record or part thereof and give in
+ 
+10	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+writing the notice of his decision to the third party.
+
+(4) A notice given under sub-section (3) shall include a statement that the third party to whom the notice is given is entitled to prefer an appeal under section 19 against the decision.
+
+
+CHAPTER III
+
+ 
+The Central Information Commission
+12. (1) The Central Government shall, by notification in the Official Gazette, constitute a body to be known as the Central Information Commission to exercise the powers conferred on, and to perform the functions assigned to, it under this Act.
+
+(2)	The Central Information Commission shall consist of—
+
+(a)	the Chief Information Commissioner; and
+(b)	such number of Central Information Commissioners, not exceeding ten, as may be deemed necessary.
+
+(3)	The Chief Information Commissioner and Information Commissioners shall be appointed by the President on the recommendation of a committee consisting of—
+
+(i)	the Prime Minister, who shall be the Chairperson of the committee;
+(ii)	the Leader of Opposition in the Lok Sabha; and
+(iii)	a Union Cabinet Minister to be nominated by the Prime Minister.
+
+Explanation.—For the purposes of removal of doubts, it is hereby declared that where the Leader of Opposition in the House of the People has not been recognised as such, the Leader of the single largest group in opposition of the Government in the House of the People shall be deemed to be the Leader of Opposition.
+
+(4)	The general superintendence, direction and management of the affairs of the Central Information Commission shall vest in the Chief Information Commissioner who shall be assisted by the Information Commissioners and may exercise all such powers and do all such acts and things which may be exercised or done by the Central Information Commission autonomously without being subjected to directions by any other authority under this Act.
+
+(5)	The Chief Information Commissioner and Information Commissioners shall be persons of eminence in public life with wide knowledge and experience in law, science and technology, social service, management, journalism, mass media or administration and governance.
+
+(6)	The Chief Information Commissioner or an Information Commissioner shall not be a Member of Parliament or Member of the Legislature of any State or Union territory, as the case may be, or hold any other office of profit or connected with any political party or carrying on any business or pursuing any profession.
+
+(7)	The headquarters of the Central Information Commission shall be at Delhi and the Central Information Commission may, with the previous approval of the Central Government, establish offices at other places in India.
+ 
+
+
+Constitution of Central Information Commission
+.
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	11
+
+13.	(1) The Chief Information Commissioner shall hold office for a term of five years from the date on which he enters upon his office and shall not be eligible for reappointment:
+
+Provided that no Chief Information Commissioner shall hold office as such after he has attained the age of sixty-five years.
+
+(2)	Every Information Commissioner shall hold office for a term of five years from the date on which he enters upon his office or till he attains the age of sixty-five years, whichever is earlier, and shall not be eligible for reappointment as such Information Commissioner:
+
+Provided that every Information Commissioner shall, on vacating his office under this sub-section be eligible for appointment as the Chief Information Commissioner in the manner specified in sub-section (3) of section 12:
+
+Provided further that where the Information Commissioner is appointed as the Chief Information Commissioner, his term of office shall not be more than five years in aggregate as the Information Commissioner and the Chief Information Commissioner.
+
+(3)	The Chief Information Commissioner or an Information Commissioner shall before he enters upon his office make and subscribe before the President or some other person appointed by him in that behalf, an oath or affirmation according to the form set out for the purpose in the First Schedule.
+
+(4)	The Chief Information Commissioner or an Information Commissioner may, at any time, by writing under his hand addressed to the President, resign from his office:
+
+Provided that the Chief Information Commissioner or an Information Commissioner may be removed in the manner specified under section 14.
+
+(5)	The salaries and allowances payable to and other terms and conditions of service
+of—
+
+(a)	the Chief Information Commissioner shall be the same as that of the Chief Election Commissioner;
+(b)	an Information Commissioner shall be the same as that of an Election Commissioner:
+
+Provided that if the Chief Information Commissioner or an Information Commissioner, at the time of his appointment is, in receipt of a pension, other than a disability or wound pension, in respect of any previous service under the Government of India or under the Government of a State, his salary in respect of the service as the Chief Information Commissioner or an Information Commissioner shall be reduced by the amount of that pension including any portion of pension which was commuted and pension equivalent of other forms of retirement benefits excluding pension equivalent of retirement gratuity:
+
+Provided further that if the Chief Information Commissioner or an Information Commissioner if, at the time of his appointment is, in receipt of retirement benefits in respect of any previous service rendered in a Corporation established by or under any Central Act or State Act or a Government company owned or controlled by the Central Government or the State Government, his salary in respect of the service as the Chief Information Commissioner or an Information Commissioner shall be reduced by the amount of pension equivalent to the retirement benefits:
+
+Provided also that the salaries, allowances and other conditions of service of the Chief Information Commissioner and the Information Commissioners shall not be varied to their	Term of office and conditions of service.
+ 
+12	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+disadvantage after their appointment.
+
+(6)	The Central Government shall provide the Chief Information Commissioner and the Information Commissioners with such officers and employees as may be necessary for the efficient performance of their functions under this Act, and the salaries and allowances payable to and the terms and conditions of service of the officers and other employees appointed for the purpose of this Act shall be such as may be prescribed.
+
+ 
+14.	(1) Subject to the provisions of sub-section (3), the Chief Information Commissioner or any Information Commissioner shall be removed from his office only by order of the President on the ground of proved misbehaviour or incapacity after the Supreme Court, on a reference made to it by the President, has, on inquiry, reported that the Chief Information Commissioner or any Information Commissioner, as the case may be, ought on such ground be removed.
+
+(2)	The President may suspend from office, and if deem necessary prohibit also from attending the office during inquiry, the Chief Information Commissioner or Information Commissioner in respect of whom a reference has been made to the Supreme Court under sub-section (1) until the President has passed orders on receipt of the report of the Supreme Court on such reference.
+
+(3)	Notwithstanding anything contained in sub-section (1), the President may by order remove from office the Chief Information Commissioner or any Information Commissioner if the Chief Information Commissioner or a Information Commissioner, as the case may be,—
+
+(a)	is adjudged an insolvent; or
+(b)	has been convicted of an offence which, in the opinion of the President, involves moral turpitude; or
+(c)	engages during his term of office in any paid employment outside the duties of his office; or
+(d)	is, in the opinion of the President, unfit to continue in office by reason of infirmity of mind or body; or
+(e)	has acquired such financial or other interest as is likely to affect prejudicially his functions as the Chief Information Commissioner or a Information Commissioner.
+
+(4)	If the Chief Information Commissioner or a Information Commissioner in any way, concerned or interested in any contract or agreement made by or on behalf of the Government of India or participates in any way in the profit thereof or in any benefit or emolument arising therefrom otherwise than as a member and in common with the other members of an incorporated company, he shall, for the purposes of sub-section (1), be deemed to be guilty of misbehaviour.
+CHAPTER IV
+
+The State Information Commission
+15.	(1) Every State Government shall, by notification in the Official Gazette, constitute a body to be known as the   (name of the State) Information Commission to
+exercise the powers conferred on, and to perform the functions assigned to, it under this Act.
+
+(2) The State Information Commission shall consist of—
+
+(a)	the State Chief Information Commissioner, and
+(b)	such number of State Information Commissioners, not exceeding ten, as may be deemed necessary.
+ 
+Removalof Chief Information Commissioner or Information Commissioner.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constitution of State Information Commission.
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	13
+
+	(3)	The State Chief Information Commissioner and the State Information Commissioners shall be appointed by the Governor on the recommendation of a committee consisting of—
+
+(i)	the Chief Minister, who shall be the Chairperson of the committee;
+(ii)	the Leader of Opposition in the Legislative Assembly; and
+(iii)	a Cabinet Minister to be nominated by the Chief Minister
+
+Explanation.—For the purposes of removal of doubts, it is hereby declared that where the Leader of Opposition in the Legislative Assembly has not been recognised as such, the Leader of the single largest group in opposition of the Government in the Legislative Assembly shall be deemed to be the Leader of Opposition.
+
+(4)	The general superintendence, direction and management of the affairs of the State Information Commission shall vest in the State Chief Information Commissioner who shall be assisted by the State Information Commissioners and may exercise all such powers and do all such acts and things which may be exercised or done by the State Information Commission autonomously without being subjected to directions by any other authority under this Act.
+
+(5)	The State Chief Information Commissioner and the State Information Commissioners shall be persons of eminence in public life with wide knowledge and experience in law, science and technology, social service, management, journalism, mass media or administration and governance.
+
+(6)	The State Chief Information Commissioner or a State Information Commissioner shall not be a Member of Parliament or Member of the Legislature of any State or Union territory, as the case may be, or hold any other office of profit or connected with any political party or carrying on any business or pursuing any profession.
+
+(7)	The headquarters of the State Information Commission shall be at such place in the State as the State Government may, by notification in the Official Gazette, specify and the State Information Commission may, with the previous approval of the State Government, establish offices at other places in the State.
+
+Term of office and conditions of service.	
+16. (1) The State Chief Information Commissioner shall hold office for a term of five years from the date on which he enters upon his office and shall not be eligible for reappointment:
+
+Provided that no State Chief Information Commissioner shall hold office as such after he has attained the age of sixty-five years.
+
+(2)	Every State Information Commissioner shall hold office for a term of five years from the date on which he enters upon his office or till he attains the age of sixty-five years, whichever is earlier, and shall not be eligible for reappointment as such State Information Commissioner:
+
+Provided that every State Information Commissioner shall, on vacating his office under this sub-section, be eligible for appointment as the State Chief Information Commissioner in the manner specified in sub-section (3) of section 15:
+
+Provided further that where the State Information Commissioner is appointed as the State Chief Information Commissioner, his term of office shall not be more than five years in aggregate as the State Information Commissioner and the State Chief Information Commissioner.
+
+(3)	The State Chief Information Commissioner or a State Information Commissioner,
+ 
+14	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+shall before he enters upon his office make and subscribe before the Governor or some other person appointed by him in that behalf, an oath or affirmation according to the form set out for the purpose in the First Schedule.
+
+(4)	The State Chief Information Commissioner or a State Information Commissioner may, at any time, by writing under his hand addressed to the Governor, resign from his office:
+
+Provided that the State Chief Information Commissioner or a State Information Commissioner may be removed in the manner specified under section 17.
+
+(5)	The salaries and allowances payable to and other terms and conditions of service
+of—
+
+(a)	the State Chief Information Commissioner shall be the same as that of an Election Commissioner;
+(b)	the State Information Commissioner shall be the same as that of the Chief Secretary to the State Government:
+
+Provided that if the State Chief Information Commissioner or a State Information Commissioner, at the time of his appointment is, in receipt of a pension, other than a disability or wound pension, in respect of any previous service under the Government of India or under the Government of a State, his salary in respect of the service as the State Chief Information Commissioner or a State Information Commissioner shall be reduced by the amount of that pension including any portion of pension which was commuted and pension equivalent of other forms of retirement benefits excluding pension equivalent of retirement gratuity:
+
+Provided further that where the State Chief Information Commissioner or a State Information Commissioner if, at the time of his appointment is, in receipt of retirement benefits in respect of any previous service rendered in a Corporation established by or under any Central Act or State Act or a Government company owned or controlled by the Central Government or the State Government, his salary in respect of the service as the State Chief Information Commissioner or the State Information Commissioner shall be reduced by the amount of pension equivalent to the retirement benefits:
+
+Provided also that the salaries, allowances and other conditions of service of the State Chief Information Commissioner and the State Information Commissioners shall not be varied to their disadvantage after their appointment.
+
+(6)	The State Government shall provide the State Chief Information Commissioner and the State Information Commissioners with such officers and employees as may be necessary for the efficient performance of their functions under this Act, and the salaries and allowances payable to and the terms and conditions of service of the officers and other employees appointed for the purpose of this Act shall be such as may be prescribed.
+
+ 
+17.	(1) Subject to the provisions of sub-section (3), the State Chief Information Commissioner or a State Information Commissioner shall be removed from his office only by order of the Governor on the ground of proved misbehaviour or incapacity after the Supreme Court, on a reference made to it by the Governor, has on inquiry, reported that the State Chief Information Commissioner or a State Information Commissioner, as the case may be, ought on such ground be removed.
+
+(2)	The Governor may suspend from office, and if deem necessary prohibit also from attending the office during inquiry, the State Chief Information Commissioner or a State Information Commissioner in respect of whom a reference has been made to the Supreme Court under sub-section (1) until the Governor has passed orders on receipt of the report of
+ 
+Removal of State Chief Information Commissioner or State Information Commissioner
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	15
+
+the Supreme Court on such reference.
+
+(3)	Notwithstanding anything contained in sub-section (1), the Governor may by order remove from office the State Chief Information Commissioner or a State Information Commissioner if a State Chief Information Commissioner or a State Information Commissioner, as the case may be,—
+
+(a)	is adjudged an insolvent; or
+(b)	has been convicted of an offence which, in the opinion of the Governor, involves moral turpitude; or
+(c)	engages during his term of office in any paid employment outside the duties of his office; or
+(d)	is, in the opinion of the Governor, unfit to continue in office by reason of infirmity of mind or body; or
+(e)	has acquired such financial or other interest as is likely to affect prejudicially his functions as the State Chief Information Commissioner or a State Information Commissioner.
+
+(4)	If the State Chief Information Commissioner or a State Information Commissioner in any way, concerned or interested in any contract or agreement made by or on behalf of the Government of the State or participates in any way in the profit thereof or in any benefit or emoluments arising therefrom otherwise than as a member and in common with the other members of an incorporated company, he shall, for the purposes of sub-section (1), be deemed to be guilty of misbehaviour.
+
+ 
+Powers and functions of Information Commissions.
+ 
+CHAPTER V
+
+Powers and functions of the Information Commissions, appeal and penalties
+
+
+18.	(1) Subject to the provisions of this Act, it shall be the duty of the Central Information Commission or State Information Commission, as the case may be, to receive and inquire into a complaint from any person,—
+
+(a)	who has been unable to submit a request to a Central Public Information Officer or State Public Information Officer, as the case may be, either by reason that no such officer has been appointed under this Act, or because the Central Assistant Public Information Officer or State Assistant Public Information Officer, as the case may be, has refused to accept his or her application for information or appeal under this Act for forwarding the same to the Central Public Information Officer or State Public Information Officer or senior officer specified in sub¬section (1) of section 19 or the Central Information Commission or the State Information Commission, as the case may be;
+(b)	who has been refused access to any information requested under this Act;
+(c)	who has not been given a response to a request for information or access to information within the time limit specified under this Act;
+(d)	who has been required to pay an amount of fee which he or she considers unreasonable;
+(e)	who believes that he or she has been given incomplete, misleading or false information under this Act; and
+(f)	in respect of any other matter relating to requesting or obtaining access to records under this Act.
+
+(2) Where the Central Information Commission or State Information Commission, as the case may be, is satisfied that there are reasonable grounds to inquire into the matter, it may initiate an inquiry in respect thereof.
+ 
+16	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+
+	(3) The Central Information Commission or State Information Commission, as the case may be, shall, while inquiring into any matter under this section, have the same powers as are vested in a civil court while trying a suit under the Code of Civil Procedure, 1908, in respect of the following matters, namely:—	5 of 1908
+	
+(a)	summoning and enforcing the attendance of persons and compel them to give oral or written evidence on oath and to produce the documents or things;
+(b)	requiring the discovery and inspection of documents;
+(c)	receiving evidence on affidavit;
+(d)	requisitioning any public record or copies thereof from any court or office;
+(e)	issuing summons for examination of witnesses or documents; and
+(f)	any other matter which may be prescribed.
+
+(4) Notwithstanding anything inconsistent contained in any other Act of Parliament or State Legislature, as the case may be, the Central Information Commission or the State Information Commission, as the case may be, may, during the inquiry of any complaint under this Act, examine any record to which this Act applies which is under the control of the public authority, and no such record may be withheld from it on any grounds.	
+
+Appeal	
+19. (1) Any person who, does not receive a decision within the time specified in sub-section (1) or clause (a) of sub-section (3) of section 7, or is aggrieved by a decision of the Central Public Information Officer or State Public Information Officer, as the case may be, may within thirty days from the expiry of such period or from the receipt of such a decision prefer an appeal to such officer who is senior in rank to the Central Public Information Officer or State Public Information Officer as the case may be, in each public authority:
+
+Provided that such officer may admit the appeal after the expiry of the period of thirty days if he or she is satisfied that the appellant was prevented by sufficient cause from filing the appeal in time.
+
+(2)	Where an appeal is preferred against an order made by a Central Public Information Officer or a State Public Information Officer, as the case may be, under section 11 to disclose third party information, the appeal by the concerned third party shall be made within thirty days from the date of the order.
+
+(3)	A second appeal against the decision under sub-section (1) shall lie within ninety days from the date on which the decision should have been made or was actually received, with the Central Information Commission or the State Information Commission:
+
+Provided that the Central Information Commission or the State Information Commission, as the case may be, may admit the appeal after the expiry of the period of ninety days if it is satisfied that the appellant was prevented by sufficient cause from filing the appeal in time.
+
+(4)	If the decision of the Central Public Information Officer or State Public Information Officer, as the case may be, against which an appeal is preferred relates to information of a third party, the Central Information Commission or State Information Commission, as the case may be, shall give a reasonable opportunity of being heard to that third party.
+
+(5)	In any appeal proceedings, the onus to prove that a denial of a request was justified shall be on the Central Public Information Officer or State Public Information Officer, as the case may be, who denied the request.
+
+(6)	An appeal under sub-section (1) or sub-section (2) shall be disposed of within
+thirty days of the receipt of the appeal or within such extended period not exceeding a total of forty-five days from the date of filing thereof, as the case may be, for reasons to be	
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	17
+
+recorded in writing.
+
+(7)	The decision of the Central Information Commission or State Information Commission, as the case may be, shall be binding.
+
+(8)	In its decision, the Central Information Commission or State Information Commission, as the case may be, has the power to—
+
+(a)	require the public authority to take any such steps as may be necessary to secure compliance with the provisions of this Act, including—
+
+(i)	by providing access to information, if so requested, in a particular form;
+(ii)	by appointing a Central Public Information Officer or State Public Information Officer, as the case may be;
+(iii)	by publishing certain information or categories of information;
+(iv)	by making necessary changes to its practices in relation to the maintenance, management and destruction of records;
+(v)	by enhancing the provision of training on the right to information for its officials;
+(vi)	by providing it with an annual report in compliance with clause (b) of sub-section (1) of section 4;
+
+(b)	require the public authority to compensate the complainant for any loss or other detriment suffered;
+
+(c)	impose any of the penalties provided under this Act;
+(d)	reject the application.
+
+(9)	The Central Information Commission or State Information Commission, as the case may be, shall give notice of its decision, including any right of appeal, to the complainant and the public authority.
+
+(10)	The Central Information Commission or State Information Commission, as the case may be, shall decide the appeal in accordance with such procedure as may be prescribed.
+
+Penalties		20. (1) Where the Central Information Commission or the State Information Commission, as the case may be, at the time of deciding any complaint or appeal is of the opinion that the Central Public Information Officer or the State Public Information Officer, as the case may be, has, without any reasonable cause, refused to receive an application for information or has not furnished information within the time specified under sub-section
+(1)	of section 7 or malafidely denied the request for information or knowingly given incorrect, incomplete or misleading information or destroyed information which was the subject of the request or obstructed in any manner in furnishing the information, it shall impose a penalty of two hundred and fifty rupees each day till application is received or information is furnished, so however, the total amount of such penalty shall not exceed twenty-five thousand rupees:
+
+Provided that the Central Public Information Officer or the State Public Information Officer, as the case may be, shall be given a reasonable opportunity of being heard before any penalty is imposed on him:
+
+Provided further that the burden of proving that he acted reasonably and diligently shall be on the Central Public Information Officer or the State Public Information Officer, as the case may be.
+
+(2)	Where the Central Information Commission or the State Information Commission, as the case may be, at the time of deciding any complaint or appeal is of the opinion that the Central Public Information Officer or the State Public Information Officer, as the case
+ 
+18	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+may be, has, without any reasonable cause and persistently, failed to receive an application for information or has not furnished information within the time specified under sub¬section (1) of section 7 or malafidely denied the request for information or knowingly given incorrect, incomplete or misleading information or destroyed information which was the subject of the request or obstructed in any manner in furnishing the information, it shall recommend for disciplinary action against the Central Public Information Officer or the State Public Information Officer, as the case may be, under the service rules applicable to him.
+
+
+CHAPTER VI
+
+ 
+
+
+Protection of action taken in good faith.
+ 
+Miscellaneous
+21.	No suit, prosecution or other legal proceeding shall lie against any person for anything which is in good faith done or intended to be done under this Act or any rule made thereunder.
+ 
+
+ 
+Act to have overriding effect
+ 
+22.	The provisions of this Act shall have effect notwithstanding anything inconsistent therewith contained in the Official Secrets Act, 1923, and any other law for the time being in force or in any instrument having effect by virtue of any law other than this Act.
+ 
+
+
+ 
+Bar of jurisdiction of courts
+ 
+23.	No court shall entertain any suit, application or other proceeding in respect of any order made under this Act and no such order shall be called in question otherwise than by way of an appeal under this Act.
+ 
+
+
+ 
+Act not to apply to certain organisations
+ 
+24.	(1) Nothing contained in this Act shall apply to the intelligence and security organisations specified in the Second Schedule, being organisations established by the Central Government or any information furnished by such organisations to that Government:
+
+Provided that the information pertaining to the allegations of corruption and human rights violations shall not be excluded under this sub-section:
+
+Provided further that in the case of information sought for is in respect of allegations of violation of human rights, the information shall only be provided after the approval of the Central Information Commission, and notwithstanding anything contained in section 7, such information shall be provided within forty-five days from the date of the receipt of request.
+
+(2)	The Central Government may, by notification in the Official Gazette, amend the Schedule by including therein any other intelligence or security organisation established by that Government or omitting therefrom any organisation already specified therein and on the publication of such notification, such organisation shall be deemed to be included in or, as the case may be, omitted from the Schedule.
+
+(3)	Every notification issued under sub-section (2) shall be laid before each House of Parliament.
+
+(4)	Nothing contained in this Act shall apply to such intelligence and security organisation being organisations established by the State Government, as that Government may, from time to time, by notification in the Official Gazette, specify:
+
+Provided that the information pertaining to the allegations of corruption and human rights violations shall not be excluded under this sub-section:
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	19
+
+	Provided further that in the case of information sought for is in respect of allegations of violation of human rights, the information shall only be provided after the approval of the State Information Commission and, notwithstanding anything contained in section 7, such information shall be provided within forty-five days from the date of the receipt of request.
+
+(5) Every notification issued under sub-section (4) shall be laid before the State Legislature.	
+	25. (1) The Central Information Commission or State Information Commission, as the case may be, shall, as soon as practicable after the end of each year, prepare a report on the implementation of the provisions of this Act during that year and forward a copy thereof to the appropriate Government.
+
+(2)	Each Ministry or Department shall, in relation to the public authorities within their jurisdiction, collect and provide such information to the Central Information Commission or State Information Commission, as the case may be, as is required to prepare the report under this section and comply with the requirements concerning the furnishing of that information and keeping of records for the purposes of this section.
+
+(3)	Each report shall state in respect of the year to which the report relates,—
+
+(a)	the number of requests made to each public authority;
+(b)	the number of decisions where applicants were not entitled to access to the documents pursuant to the requests, the provisions of this Act under which these decisions were made and the number of times such provisions were invoked;
+(c)	the number of appeals referred to the Central Information Commission or State Information Commission, as the case may be, for review, the nature of the appeals and the outcome of the appeals;
+(d)	particulars of any disciplinary action taken against any officer in respect of the administration of this Act;
+(e)	the amount of charges collected by each public authority under this Act;
+(f)	any facts which indicate an effort by the public authorities to administer and implement the spirit and intention of this Act;
+(g)	recommendations for reform, including recommendations in respect of the particular public authorities, for the development, improvement, modernisation, reform or amendment to this Act or other legislation or common law or any other matter relevant for operationalising the right to access information.
+
+(4)	The Central Government or the State Government, as the case may be, may, as soon as practicable after the end of each year, cause a copy of the report of the Central Information Commission or the State Information Commission, as the case may be, referred to in sub-section (1) to be laid before each House of Parliament or, as the case may be, before each House of the State Legislature, where there are two Houses, and where there is one House of the State Legislature before that House.
+
+(5)	If it appears to the Central Information Commission or State Information Commission, as the case may be, that the practice of a public authority in relation to the exercise of its functions under this Act does not conform with the provisions or spirit of this Act, it may give to the authority a recommendation specifying the steps which ought in
+its opinion to be taken for promoting such conformity.	Monitoring and Reporting
+Appropriate Government to prepare programmes	26.	(1) The appropriate Government may, to the extent of availability of financial and other resources,—
+
+(a)	develop and organise educational programmes to advance the understanding of the public, in particular of disadvantaged communities as to how to exercise the rights contemplated under this Act;	
+ 
+20	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+
+(b)	encourage public authorities to participate in the development and organisation of programmes referred to in clause (a) and to undertake such programmes themselves;
+
+(c)	promote timely and effective dissemination of accurate information by public authorities about their activities; and
+
+(d)	train Central Public Information Officers or State Public Information Officers, as the case may be, of public authorities and produce relevant training materials for use by the public authorities themselves.
+
+(2)	The appropriate Government shall, within eighteen months from the commencement of this Act, compile in its official language a guide containing such information, in an easily comprehensible form and manner, as may reasonably be required by a person who wishes to exercise any right specified in this Act.
+
+(3)	The appropriate Government shall, if necessary, update and publish the guidelines referred to in sub-section (2) at regular intervals which shall, in particular and without prejudice to the generality of sub-section (2), include—
+
+(a)	the objects of this Act;
+(b)	the postal and street address, the phone and fax number and, if available, electronic mail address of the Central Public Information Officer or State Public Information Officer, as the case may be, of every public authority appointed under sub-section (1) of section 5;
+(c)	the manner and the form in which request for access to an information shall be made to a Central Public Information Officer or State Public Information Officer, as the case may be;
+(d)	the assistance available from and the duties of the Central Public Information Officer or State Public Information Officer, as the case may be, of a public authority under this Act;
+(e)	the assistance available from the Central Information Commission or State Information Commission, as the case may be;
+(f)	all remedies in law available regarding an act or failure to act in respect of a right or duty conferred or imposed by this Act including the manner of filing an appeal to the Commission;
+(g)	the provisions providing for the voluntary disclosure of categories of records in accordance with section 4;
+(h)	the notices regarding fees to be paid in relation to requests for access to an information; and
+(i)	any additional regulations or circulars made or issued in relation to obtaining access to an information in accordance with this Act.
+
+(4)	The appropriate Government must, if necessary, update and publish the guidelines at regular intervals.	
+
+27. (1) The appropriate Government may, by notification in the Official Gazette, make rules to carry out the provisions of this Act.
+
+(2) In particular, and without prejudice to the generality of the foregoing power, such rules may provide for all or any of the following matters, namely:—
+
+(a)	the cost of the medium or print cost price of the materials to be disseminated under sub-section (4) of section 4;
+(b)	the fee payable under sub-section (1) of section 6;
+(c)	the fee payable under sub-sections (1) and (5) of section 7;
+(d)	the salaries and allowances payable to and the terms and conditions of service of the officers and other employees under sub-section (6) of section 13 and	
+Power to make rules by appropriate Government
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	21
+
+sub-section (6) of section 16;
+(e)	the procedure to be adopted by the Central Information Commission or State Information Commission, as the case may be, in deciding the appeals under sub-section (10) of section 19; and
+(f)	any other matter which is required to be, or may be, prescribed.
+
+ 
+28.	(1) The competent authority may, by notification in the Official Gazette, make rules to carry out the provisions of this Act.
+
+(2) In particular, and without prejudice to the generality of the foregoing power, such rules may provide for all or any of the following matters, namely:—
+
+(i)	the cost of the medium or print cost price of the materials to be disseminated under sub-section (4) of section 4;
+(ii)	the fee payable under sub-section (1) of section 6;
+(iii)	the fee payable under sub-section (1) of section 7; and
+(iv)	any other matter which is required to be, or may be, prescribed
+ 
+Power to make rules by competent authority.
+ 
+
+ 
+29.	(1) Every rule made by the Central Government under this Act shall be laid, as soon as may be after it is made, before each House of Parliament, while it is in session, for a total period of thirty days which may be comprised in one session or in two or more successive sessions, and if, before the expiry of the session immediately following the session or the successive sessions aforesaid, both Houses agree in making any modification in the rule or both Houses agree that the rule should not be made, the rule shall thereafter have effect only in such modified form or be of no effect, as the case may be; so, however, that any such modification or annulment shall be without prejudice to the validity of anything previously done under that rule.
+
+(2) Every rule made under this Act by a State Government shall be laid, as soon as may be after it is notified, before the State Legislature.
+ 
+Laying of rules.
+ 
+
+
+ 
+30.	(1) If any difficulty arises in giving effect to the provisions of this Act, the Central Government may, by order published in the Official Gazette, make such provisions not inconsistent with the provisions of this Act as appear to it to be necessary or expedient for removal of the difficulty:
+
+Provided that no such order shall be made after the expiry of a period of two years from the date of the commencement of this Act.
+ 
+Power to remove difficulties.
+ 
+
+(2) Every order made under this section shall, as soon as may be after it is made, be laid before each House of Parliament.
+Repeal	31. The Freedom of Information Act, 2002 is hereby repealed.	5 of 2003
+ 
+22	THE GAZETTER OF INDIA EXTRAORDINARY	[PART II—
+THE FIRST SCHEDULE
+
+[See sections 13 (3) and 16(3)]
+
+Form of oath or affirmation to be made by the Chief Information Commissioner/the Information Commissioner/the State Chief Information Commissioner/the State Information Commissioner
+
+"I,	, having been appointed Chief Information Commissioner
+/Information Commissioner / State Chief Information Commissioner / State Information Commissioner swear in the name of God
+solemnly affirm
+
+that I will bear true faith and allegiance to the Constitution of India as by law established, that I will uphold the sovereignty and integrity of India, that I will duly and faithfully and to the best of my ability, knowledge and judgment perform the duties of my office without fear or favour, affection or ill-will and that I will uphold the Constitution and the laws.".
+ 
+SEC.1	THE GAZETTE OF INDIA EXTRAORDINARY	23
+
+
+THE SECOND SCHEDULE
+
+(See section 24)
+
+Intelligence and security organisation established by the Central Government
+1.	Intelligence Bureau.
+2.	Research and Analysis Wing of the Cabinet Secretariat.
+3.	Directorate of Revenue Intelligence.
+4.	Central Economic Intelligence Bureau.
+5.	Directorate of Enforcement.
+6.	Narcotics Control Bureau.
+7.	Aviation Research Centre.
+8.	Special Prontier Force.
+9.	Border Security Force.
+10.	Central Reserve Police Force.
+11.	Indo-Tibetan Border Police.
+12.	Central Industrial Security Force.
+13.	National Security Guards.
+14.	Assam Rifles.
+15.	Special Service Bureau
+16.	Special Branch (CID), Andaman and Nicobar.
+17.	The Crime Branch-C.I.D.-CB, Dadra and Nagar Haveli.
+18.	Special Branch, Lakshadweep Police.
+
+
+T. K. VISWANATHAN,
+Secy. to the Govt. of India.
+Printed by THE Manager, Government of India Press, Minto Road, New Delhi and Published by the Controller of Publications, Delhi, 2005.
+MGIPMRND—1359GI(S3)—22-06-2005.
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+DISCLAIMER
+
+
+Though all possible care has been taken to ensure accuracy and consistency, in the event of a conflict between the Guide and Government orders/ instructions on the subject, the latter will prevail.
+Any information given herein cannot be cited in any dispute or litigation, nor is it a substitute for a legal interpretation/ evidence. The user will be solely responsible for any consequence of the decision taken on the basis of information contained in this Guide.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2
+ 
+
+
+
+
+
+
+
+
+GUIDE ON RIGHT TO INFORMATION ACT, 2005
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3
+ 
+The right to information is implicitly guaranteed by the Constitution. However, with a view to set out a practical regime for the citizens to secure information as a matter of right, the Indian Parliament enacted the Right to Information Act, 2005. This law is very comprehensive and covers almost all matters of governance. This Law has a wide reach, being applicable to Government at all levels- Union, State and Local as well as to the recipients of substantial government funds.
+
+2.	The present guide is an updated and consolidated guide for the use of all stake-holders. This guide contains five parts. Part I of the guide discusses some aspects of the Act which all the stake-holders are required to know. Rest of the four parts are specifically relevant to the public authorities, the information seekers, the public information officers and the first appellate authorities respectively.
+
+3.	Contents of this guide are specifically relevant in relation to the Central Government but are equally applicable to the State Governments except in relation to rules about payment of fee or deciding of appeals by the Information Commissions. It may be noted that this guide uses the term Public Information Officer in place of Central Public Information Officer/State Public Information Officer. Likewise Assistant Public Information Officer has been used for Central Assistant Public Information Officer/State Assistant Public Information Officer and Information Commission for Central Information Commission/State Information Commission except where it was considered necessary to make specific reference to the Central Public Information Officer/Central Information Commission etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4
+ 
+Part I
+
+
+FOR ALL STAKEHOLDERS
+
+
+Object of the Right to Information Act
+
+
+4.	The basic object of the Right to Information Act is to empower the citizens, to promote transparency and accountability in the working of the Government, to contain corruption, and to enhance people’s participation in democratic process thereby making our democracy work for the people in a real sense. It goes without saying that an informed citizen is better equipped to keep necessary vigil on the instruments of governance and make the government more accountable to the governed. The Act is a big step towards making the citizens informed about the activities of the Government.
+
+What is Information
+
+
+5.	Information is any material in any form. It includes records, documents, memos, e-mails, opinions, advices, press releases, circulars, orders, logbooks, contracts, reports, papers, samples, models, data material held in any electronic form. It also includes information relating to any private body which can be accessed by the public authority under any law for the time being in force.
+
+What is a Public Authority
+
+
+6.	A "public authority" is any authority or body or institution of self government established or constituted by or under the Constitution; or by any other law made by the Parliament or a State Legislature; or by notification issued or order made by the Central Government or a State Government. The bodies owned, controlled or substantially financed by the Central Government or a State Government are also public authorities. Non-Government organisations substantially financed by the Central Government or a State Government also fall within the definition of public authority. The substantial financing by the Central Government or a State Government may be direct or indirect. The Act does not define substantial financing. Various courts/Information Commissions have been deciding on this issue on case to case basis, depending upon the merits of each case.
+
+5
+ 
+Public Information Officer
+
+
+7.	Public authorities have designated some of its officers as Public Information Officers. They are responsible to give information to a person who seeks information under the RTI Act.
+
+Assistant Public Information Officer
+
+
+8.	These are the officers at sub-divisional level to whom a person can give his RTI application or appeal. These officers send the application or appeal to the Public Information Officer of the public authority or the concerned appellate authority. An Assistant Public Information Officer is not responsible to supply the information.
+
+9.	The Assistant Public Information Officers appointed by the Department of Posts in various post offices are working as Assistant Public Information Officers for all the public authorities under the Government of India.
+
+Right to Information under the Act
+
+
+10.	A citizen has a right to seek such information from a public authority which is held by the public authority or which is held under its control. This right includes inspection of work, documents and records; taking notes, extracts or certified copies of documents or records; and taking certified samples of material held by the public authority or held under the control of the public authority. It is important to note that only such information can be supplied under the Act that is available and existing and is held by the public authority or is held under the control of the public authority. The Public Information Officer is not supposed to create information that is not a part of the record of the public authority. The Public Information Officer is also not required to furnish information which require drawing of inference and/or making of assumptions; or to interpret information; or to solve the problems raised by the applicants; or to furnish replies to hypothetical questions.
+
+11.	A citizen has a right to obtain information from a public authority in the form of diskettes, floppies, tapes, video cassettes or in any other electronic mode or through print-outs provided such information is already stored in a computer or in any other device.
+
+12.	The information to the applicant should ordinarily be provided in the form in which it is sought. However, if the supply of information sought in a particular form would
+
+6
+ 
+disproportionately divert the resources of the public authority or may cause harm to the safety or preservation of the records, supply of information in that form may be denied.
+
+13.	In some cases, the applicants expect the Public Information Officer to give information in some particular proforma devised by them on the plea that they have a right to get information in the form in which it is sought. It need be noted that the provision in the Act simply means that if the information is sought in the form of photocopy, it shall be provided in the form of photocopy, or if it is sought in the form of a floppy or in any other electronic mode, it shall be provided in that form, subject to the conditions given in the Act. It does not mean that the PIO shall re-shape the information.
+
+14.	Some Information Seekers request the Public Information Officers to cull out information from some document(s) and give such extracted information to them. A citizen has a right to get ‘material’ from a public authority which is held by or under the control of that public authority. The Act, however, does not require the Public Information Officer to deduce some conclusion from the ‘material’ and supply the ‘conclusion’ so deduced to the applicant. It means that the Public Information Officer is required to supply the ‘material’ in the form as held by the public authority, but not to do research on behalf of the citizen to deduce anything from the material and then supply it to him.
+
+Right to Information Vis-a-Vis other Acts
+
+15.	The RTI Act has over-riding effect vis-à-vis other laws. It implies that if any of the provisions of the RTI Act are not consistent with any other law for the time being in force including the Official Secrets Act, 1923, the provisions of the RTI Act would have effect.
+
+Supply of Information to Associations etc.
+16.	The Act gives the right to information only to the citizens of India. It does not make provision for giving information to Corporations, Associations, Companies etc. which are legal entities/persons, but not citizens. However, if an application is made by an employee or office-bearer of any Corporation, Association, Company, NGO etc. indicating his name and such employee/office bearer is a citizen of India, information may be supplied to him/her. In such cases, it would be presumed that a citizen has sought information at the address of the Corporation etc.
+
+Fee for Seeking Information
+
+17.	A citizen who desires to seek some information from a public authority is required to send, along with the application, a demand draft or a bankers cheque or an Indian Postal Order of Rs.10/- (Rupees ten), payable to the Accounts Officer of the public authority as fee prescribed for seeking information. The payment of fee can also be made by way of cash to the public authority or to the Assistant Public Information Officer,  against  a  proper  receipt.  The  payment  of  fee  to  the  Central
+7
+ 
+Ministries/departments can also be made online through internet banking of State Bank of India or through Master/Visa Debit/credit cards.
+
+18.	The applicant may also be required to pay further fee towards the cost of providing the information, details of which shall be intimated to the applicant by the PIO as prescribed by the Right to Information Rules, 2012. Rates of fee as prescribed in the Rules are given below:
+
+(a)	rupees two (Rs. 2/-) for each page ( in A-3 or smaller size paper) ;
+(b)	actual cost or price of a photocopy in larger size paper;
+(c)	actual cost or price for samples or models;
+(d)	rupees fifty (Rs.50/-) per diskette or floppy; and
+(e)	price fixed for a publication or rupees two per page of photocopy for extracts from the publication.
+(f)	so much of postal charges involved in supply of information that exceeds fifty rupees.
+
+19.	A citizen has a right to inspect the records of a public authority. For inspection of records, the public authority shall charge no fee for the first hour. But a fee of rupees five (Rs.5/-) for each subsequent hour (or fraction thereof) shall be charged.
+
+20.	If the applicant belongs to the below poverty line (BPL) category, he is not required to pay any fee. However, he should submit a proof in support of his claim as belonging to the below poverty line category. The application not accompanied by the prescribed fee of Rs.10/- or proof of the applicant’s belonging to below poverty line category, as the case may be, shall not be a valid application under the Act. It may be pointed out that there is no bar on the public authority to supply information in response to such applications. However, provisions of Act would not apply to such cases.
+
+Format of Application
+
+
+21.	There is no prescribed format of application for seeking information. The application can be made on plain paper. The applicant should mention the address at which the information is required to be sent.
+22.	The information seeker is not required to give reasons for seeking information.
+Information Exempted From Disclosure
+
+23.	Sub-section (1) of section 8 and section 9 of the Act enumerate the types of information which is exempt from disclosure. Sub-section (2) of section 8, however, provides that information exempted under sub-section (1) or exempted under the Official Secrets Act, 1923 can be disclosed if public interest in disclosure overweighs the harm to the protected interests.
+
+
+
+8
+ 
+24.	The information which, in normal course, is exempt from disclosure under sub-section (1) of Section 8 of the Act, would cease to be exempted if 20 years have lapsed after occurrence of the incident to which the information relates. However, the following types of information would continue to be exempt and there would be no obligation, even after lapse of 20 years, to give any citizen-
+
+(i)	Information, disclosure of which would prejudicially affect the sovereignty and integrity of India, the security, strategic, scientific or economic interest of the State, relation with foreign state or lead to incitement of an offence;
+(ii)	Information, the disclosure of which would cause a breach of privilege of Parliament or State Legislature; or
+(iii)	cabinet papers including records of deliberations of the Council of Ministers, Secretaries and other Officers subject to the conditions given in proviso to clause (i) of sub-section(1) of Section 8 of the Act.
+
+Record Retention Schedule and the Act
+
+25.	The Act does not require the public authorities to retain records for indefinite period. The records need be retained as per the record retention schedule applicable to the concerned public authority.
+
+Assistance Available to the Applicant
+26.	If a person is unable to make a request in writing, he may seek the help of the Public Information Officer to write his application and the Public Information Officer should render him reasonable assistance. Where a decision is taken to give access to a sensorily disabled person to any document, the Public Information Officer, shall provide such assistance to the person as may be appropriate for inspection.
+
+Time Period for Supply of Information
+
+27.	In normal course, information to an applicant shall be supplied within 30 days from the receipt of application by the public authority. If information sought concerns the life or liberty of a person, it shall be supplied within 48 hours. Further details in this regard are given in part IV viz. ‘For the Public Information Officers.’
+
+Appeals
+
+28.	If an applicant is not supplied information within the prescribed time of thirty days or 48 hours, as the case may be, or is not satisfied with the information furnished to him, he may prefer an appeal to the first appellate authority who is an officer senior in rank to the Public Information Officer. Such an appeal should be filed within a period of thirty days from the date on which the limit of 30 days of supply of information is expired or from the date on which the information or decision of the Public Information Officer is received. The appellate authority of the public authority shall dispose of the appeal
+
+9
+ 
+within a period of thirty days or in exceptional cases within 45 days of the receipt of the appeal.
+
+29.	If the first appellate authority fails to pass an order on the appeal within the prescribed period or if the appellant is not satisfied with the order of the first appellate authority, he may prefer a second appeal with the Information Commission within ninety days from the date on which the decision should have been made by the first appellate authority or was actually received by the appellant.
+
+Complaints
+
+
+30.	If any person is unable to submit a request to a Public Information Officer either by reason that such an officer has not been appointed by the concerned public authority; or the Assistant Public Information Officer has refused to accept his or her application or appeal for forwarding the same to the Public Information Officer or the appellate authority, as the case may be; or he has been refused access to any information requested by him under the RTI Act; or he has not been given a response to a request for information within the time limit specified in the Act; or he has been required to pay an amount of fee which he considers unreasonable; or he believes that he has been given incomplete, misleading or false information, he can make a complaint to the Information Commission.
+
+
+Third Party Information
+
+31.	Third party in relation to the Act means a person other than the citizen making a request for information. The definition of third party includes a public authority other than the public authority to which the request has been made.
+
+Disclosure of Third Party Information
+
+32.	Information including commercial confidence, trade secrets or intellectual property, the disclosure of which would harm the competitive position of a third party, is exempt from disclosure. Such information should not be disclosed unless the competent authority is satisfied that larger public interest warrants the disclosure of such information.
+
+33.	In regard to a third party information which the third party has treated as confidential, the Public Information Officer should follow the procedure as given in part IV viz. ‘FOR PUBLIC INFORMATION OFFICERS’. The third party should be given full opportunity to put his case for non-disclosure if he desires that the information should not be disclosed.
+
+
+
+10
+ 
+RTI ONLINE
+
+34.	Department of Personnel & Training has launched a web portal namely RTI online with URL www.rtionline.gov.in for all Central Ministries/Departments. This is a facility for the Indian citizens to file RTI applications and first appeals online to all Central Ministries/Departments. The prescribed RTI fees can also be paid online. Reply to the RTI applications and first appeals received online can also be given online by the respective PIOs/FAAs.
+
+Compilation of OMs and notifications on RTI
+
+35.	Department of Personnel and Training has launched an online compilation of its Office Memorandums and Notifications on Right to Information Act, 2005, with topic based search facility. This compilation is available on the website of the Department namely www.persmin.nic.in and is beneficial to all the stake holders.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11
+ 
+Part II
+
+FOR PUBLIC AUTHORITIES
+
+
+Public authorities are the repository of information which the citizens have a right to access under the Right to Information Act, 2005. The Act casts important obligations on public authorities so as to facilitate the citizens of the country to access the information held under their control.
+
+Maintenance and Computerisation of Records
+
+
+2.	Proper management of records is of utmost importance for effective implementation of the provisions of the Act. A public authority should, therefore, maintain all its records properly. It should ensure that the records are duly catalogued and indexed in such a manner and form that it may facilitate the right to information.
+
+Suo Motu Disclosure
+
+3.	Every public authority should provide as much information suo motu to the public through various means of communications so that the public have minimum need to use the Act to obtain information. Internet being one of the most effective means of communication, the information may be posted on the website.
+
+4.	Section 4(1)(b) of the Act, in particular, requires every public authority to publish following sixteen categories of information:
+
+(i)	the particulars of its organisation, functions and duties;
+(ii)	the powers and duties of its officers and employees;
+(iii)	the procedure followed in the decision making process, including channels of supervision and accountability;
+(iv)	the norms set by it for the discharge of its functions;
+(v)	the rules, regulations, instructions, manuals and records, held by it or under its control or used by its employees for discharging its functions;
+(vi)	a statement of the categories of documents that are held by it or under its control;
+(vii)	the particulars of any arrangement that exists for consultation with, or representation by, the members of the public in relation to the formulation of its policy or implementation thereof;
+(viii)	a statement of the boards, councils, committees and other bodies consisting of two or more persons constituted as its part or for the purpose of its advice,
+12
+ 
+and as to whether meetings of those boards, councils, committees and other bodies are open to the public, or the minutes of such meetings are accessible for public;
+(ix)	directory of its officers and employees;
+(x)	the monthly remuneration received by each of its officers and employees, including the system of compensation as provided in its regulations;
+(xi)	the budget allocated to each of its agency, indicating the particulars of all plans, proposed expenditures and reports on disbursements made;
+(xii)	the manner of execution of subsidy programmes, including the amounts allocated and the details of beneficiaries of such programmes;
+(xiii)	particulars of recipients of concessions, permits or authorisations granted by it;
+(xiv)	details in respect of the information, available to or held by it, reduced in an electronic form;
+(xv)	the particulars of facilities available to citizens for obtaining information, including the working hours of a library or reading room, if maintained for public use;
+(xvi)	the names, designations and other particulars of the Public Information Officers.
+
+5.	Besides the categories of information enumerated above, the Government has issued guidelines that the following categories of information may be published by the public authorities:
+
+i.	Information relating to procurement
+
+ii.	Public Private Partnerships
+
+iii.	Transfer Policy and Transfer Orders
+
+iv.	RTI Applications
+
+v.	CAG & PAC paras
+
+vi.	Citizens Charter
+
+vii.	Discretionary and Non-discretionary grants
+
+viii.	Foreign Tours of PM/Ministers and senior officers
+
+6.	In addition, the Government may prescribe other categories of information to be published by any public authority. It need be stressed that publication of the information as referred to above is not optional. It is a statutory requirement which every public authority is bound to meet.
+
+
+
+13
+ 
+7.	Proactive disclosure should be done in the local language so that it remains accessible to public. It should be presented in a form that is easily understood and if technical words are used they should be carefully explained. As provided in section 4, disclosure should be made in as many mediums as feasible such as notice boards, newspapers, public announcements, media broadcast, the internet or any other means. The disclosures should be kept up to date. The disclosure of Information may be made keeping in mind the provisions of Section 8 to 11 of the RTI Act.
+8.	Every public authority should keep in view that Proactive disclosures on its website are complete, easily accessible, technology and platform neutral and in a form which conveys the desired information in an effective and user-friendly manner.
+9.	Each Central Ministry/ Public Authority should get its proactive disclosure package audited by third party every year. Such audit should be communicated to the Central Information Commission annually through publication on their own websites. All Public Authorities should proactively disclose the names of the third party auditors on their website. For carrying out third party audit through outside consultants also, Ministries/Public Authorities should utilize their plan/non-plan funds.
+10.	Each Central Ministry/ Public Authority should appoint a senior officer not below the rank of a Joint Secretary and not below rank of Additional HOD in case of attached offices for ensuring compliance with the proactive disclosure guidelines.
+Designation of PIOs and APIOs etc.
+11.	Every public authority is required to designate Public Information Officers in all the administrative units or offices under it. Every public authority is also required to designate Assistant Public Information Officers at each sub-divisional level. The Government of India has decided that Central Assistant Public Information Officers (CAPIOs) appointed by the Department of Posts would act as CAPIOs for all the public authorities under the Government of India.
+
+Designation of Appellate Authority
+
+
+12.	Sub-section (8) of Section 7 of the RTI Act provides that where a request for information is rejected, the Public Information Officer shall, inter-alia, communicate the particulars of the Appellate Authority to the person making the request. Thus, the applicant is informed about the particulars of the Appellate Authority when a request for information is rejected but there may be cases where the Public Information Officer does not reject the application, but the applicant does not receive a decision within the time as specified in the Act or he is aggrieved by the decision of the Public Information Officer. In such a case the applicant may like to exercise his right to appeal. But in absence of the particulars of the appellate authority, the applicant may face difficulty in making an appeal. All the public authorities should also designate the First Appellate Authorities and publish their particulars alongwith the particulars of the Public Information Officers.
+
+14
+ 
+Acceptance of Fee
+
+
+13.	According to the Right to Information Rules, 2012, an applicant can make payment of fee in cash to the public authority or CAPIO or by demand draft or banker’s cheque or Indian Postal Order payable to the Accounts Officer of the public authority. The payment of fee to the Central Ministries/departments can also be made online through internet banking of State Bank of India or through Master/Visa Debit/credit cards. The public authority should ensure that payment by any of the above modes is not denied or the applicant is not compelled to draw IPO etc. in the name of any officer other than the Accounts Officer. If any public authority does not have any Accounts Officer, it should designate an officer as such for the purpose of receiving fee under the RTI Act and Rules made thereunder.
+
+Compliance of the Orders of the Information Commission
+
+
+14.	The decisions of the Commission are binding. The public authority should ensure that the orders passed by the Commission are implemented. If any public authority or a PIO is of the view that an order of the Commission is not in consonance with the provisions of the Act, it may approach the High Court by way of a Writ Petition.
+Creation of RTI Cell
+
+
+15.	Sub-section (1) of Section 5 of the Right to Information Act, 2005 mandates all public authorities to designate as many Public Information Officers as necessary to provide information under the Act. Where a public authority designates more than one Public Information Officer (PIO), an applicant is likely to face difficulty in approaching the appropriate Public Information Officer. The applicants would also face problem in identifying the officer senior in rank to the Public Information Officer to whom an appeal under sub-section (1) of Section 19 of the Act can be made. Therefore all public authorities with more than one PIO should create a RTI Cell within the organisation to receive all the RTI applications and first appeals and to route them to the concerned PIOs/FAAs. Detailed instructions regarding setting up of RTI Cell, its functions and financial assistance in setting up RTI Cell have been issued by the Department.
+
+Transfer of Applications
+
+
+16.	The Act provides that if an application is made to a public authority requesting for an information, which is held by another public authority; or the subject matter of which is more closely connected with the functions of another public authority, the public authority, to which such application is made, shall transfer the application or relevant part of it to that other public authority within five days from the receipt of the application.
+
+15
+ 
+The public authority should sensitize its officers about this provision of the Act lest the public authority is held responsible for delay.
+17.	If a person makes an application to a public authority for information, a part of which is available with that public authority and the rest of the information is scattered with more than one other public authorities, in such a case, the PlO of the public authority receiving the application should give information relating to it and advise the applicant to make separate applications to the concerned public authorities for obtaining information from them. If no part of the information sought, is available with it but is scattered with more than one other public authorities, the PlO should inform the applicant that information is not available with the public authority and that the applicant should make separate applications to the concerned public authorities for obtaining information from them. However, if the details of public authorities who may have the information sought by the applicant are available with the PIO, such details may also be provided to the applicant.
+
+18.	If a person makes an application to a public authority for some information which is the concern of a public authority under any State Government or the Union Territory Administration, the Central Public Information Officer (CPIO) of the public authority receiving the application should inform the applicant that the information may be had from the concerned State Government/UT Administration. Application, in such a case, need not be transferred to the State Government/UT Administration.
+
+Annual Report of the CIC
+
+
+19.	The Information Commissions, after the end of each year, are required to prepare reports on the implementation of the provisions of the Act during that year. Each Ministry or Department is required, in relation to the public authorities within its jurisdiction, to collect and provide information to the concerned Information Commission for preparation of the report. The report of the Commission, inter-alia, contains following information in respect of the year to which the report relates—
+(a)	the number of requests made to each public authority;
+(b)	the number of decisions where applicants were not entitled to access to the documents pursuant to the requests, the provisions of the Act under which these decisions were made and the number of times such provisions were invoked;
+(c)	particulars of any disciplinary action taken against any officer in respect of the administration of the Act;
+(e)	the amount of charges collected by each public authority under the Act; and
+(f)	any facts which indicate an effort by the public authorities to administer and implement the spirit and intention of the Act.
+
+
+16
+ 
+20.	Every public authority should send necessary material to its administrative Ministry/Department soon after the end of the year so that the Ministry/Department may send the information to the Commission and the Commission may incorporate the same in its report. For this purpose, a web based software called “RTI Annual Report Information System” is available on the website of CIC namely www.cic.gov.in through which public authorities are required to upload requisite reports on quarterly basis. It is important that all public authorities should get themselves registered with CIC for the purpose of this report and also upload their quarterly returns regularly and on time.
+21.	If it appears to the Information Commission that a practice of a public authority in relation to the exercise of its functions under the Act does not conform with the provisions or spirit of the Act, it may give a recommendation to the authority specifying the steps ought to be taken for promoting such conformity. The concerned public authority should take necessary action to bring its practice in conformity with the Act.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17
+ 
+Part III
+
+FOR INFORMATION SEEKERS
+
+Method of Seeking Information
+
+A citizen, who desires to obtain any information under the Act, should make an application to the Public Information Officer of the concerned public authority in writing in English or Hindi or in the official language of the area in which the application is made. The application should be precise and specific. He should make payment of application fee at the time of submitting the application as prescribed in the RTI Rules, 2012. The applicant can send the application by post or through electronic means or can deliver it personally in the office of the public authority. The application can also be sent through an Assistant Public Information Officer.
+
+Application to the concerned Public Authority
+2.	The applicant should make application to the Public Information Officer of the concerned public authority. He should make all efforts to ascertain as to which the public authority is concerned with the information. If the information sought by an applicant is related to different PIOs in a Public Authority or is related to different Public authorities, the supply of information is likely to take a lot more time than if the information sought is related to a single PIO in one Public Authority.
+
+3.	The applicant should not list out his grievances in the RTI application but should clearly mention which information or record he would like to seek. Further, if the drafting of the application is such that it pin points towards the specific documents required in relation to the information sought, there would be less scope of ambiguity, thereby resulting in less chances of denial of information by the Public Information Officer. For example instead of simply asking why my area is not being cleaned, cleaning schedule of the area should be asked. Similarly, instead of asking when we will get water supply, water supply planning of the area should be asked.
+
+Fee for Seeking Information 
+
+
+4.	Along with the application, the applicant should send application fee to the Public Information Officer. In case of Government of India, the prescribed application fee is Rs. 10/- which can be paid through a demand draft or a banker’s cheque or an Indian Postal Order payable to the Accounts Officer of the public authority. The payment of fee
+18
+ 
+can also be made by way of cash to the public authority or to the Assistant Public Information Officer against proper receipt. In case of online applications to Central Ministries/departments, fee can be paid online through internet banking of State Bank of India or through Master/Visa credit/debit cards.
+
+5.	The applicant may also be required to pay further fee towards the cost of providing the information, details of which shall be intimated to the applicant by the Public Information Officer. The fee so demanded can be paid the same way as application fee.
+
+6.	If the applicant belongs to below poverty line (BPL) category, he is not required to pay any fee. However, he should submit a proof in support of his claim as belonging to the below poverty line category. The application not accompanied by the prescribed application fee or proof of the applicant’s belonging to below poverty line category, as the case may be, shall not be a valid application under the Act.
+
+Format of Application
+
+
+7.	There is no prescribed format of application for seeking information. The application can be made on a plain paper. The applicant should mention the address at which the information is required to be sent. The information seeker is not required to give reasons for seeking information.
+Filing of Appeal
+
+8.	An applicant can file an appeal to the first appellate authority if the information is not supplied to him within the prescribed time of thirty days or 48 hours, as the case may be, or is not satisfied with the information furnished to him. Such an appeal should be filed within a period of thirty days from the date on which the limit of 30 days of supply of information is expired or from the date on which the information or decision of the Public Information Officer is received. The first appellate authority of the public authority shall dispose of the appeal within a period of thirty days or in exceptional cases within 45 days of the receipt of the appeal.
+
+9.	If the first appellate authority fails to pass an order on the appeal within the prescribed period or if the appellant is not satisfied with the order of the first appellate authority, he may prefer a second appeal with the Information Commission within ninety days from the date on which the decision should have been made by the first appellate authority or was actually received by the appellant.
+
+10.	The appeal made to the Central Information Commission should contain the following information: -
+
+(i)	Name and address of the appellant;
+
+19
+ 
+(ii)	Name and address of the Public Information Officer to whom the application was addressed;
+(iii)	Name and address of the Public Information Officer who gave reply to the application;
+(iv)	Name and address of the First Appellate Authority who decided the first appeal;
+(v)	Particulars of the application;
+(vi)	Particulars of the order including number, if any, against which the appeal is preferred;
+(vii)	Brief facts leading to the appeal;
+(viii)	Prayer or relief sought;
+(ix)	Grounds for prayer or relief;
+(x)	Any other information relevant to the appeal;
+(xi)	Verification/authentication by the appellant.
+
+
+11.	The appeal made to the Central Information Commission should be accompanied by the following documents, duly authenticated and verified by the appellant, namely:
+(i)	a copy of the application submitted to the CPIO;
+(ii)	a copy of the reply received, if any , from the CPIO;
+(iii)	a copy of the appeal made to the FAA;
+(iv)	a copy of the order received, if any, from the FAA;
+(v)	Copies of other documents relied upon by the appellant and referred to in his appeal; and
+(vi)	an index of the documents referred to in the appeal.
+
+
+Filing of Complaints
+
+12.	A person can make a complaint to the Information Commission if he is unable to submit a request to a Public Information Officer either by reason that such an officer has not been appointed by the concerned public authority; or the Assistant Public Information Officer has refused to accept his or her application or appeal for forwarding the same to the Public Information Officer or the appellate authority, as the case may be; or he has been refused access to any information requested by him under the RTI Act; or he has not been given a response to a request for information within the time limit specified in the Act; or he has been required to pay an amount of fee which he considers unreasonable; or he believes that he has been given incomplete, misleading or false information.
+
+
+
+
+
+
+
+
+
+
+
+20
+ 
+Part IV
+
+FOR PUBLIC INFORMATION OFFICERS
+
+
+The Public Information Officer of a public authority plays a pivotal role in making the right of citizens to information a reality. The Act casts specific duties on him and makes him liable for penalty in case of default. It is, therefore, essential for a Public Information Officer to study the Act carefully and understand its provisions correctly. Besides the issues discussed elsewhere in this document, a Public Information Officer should keep the following aspects in view while dealing with the applications under the Act.
+
+Applications Received Without Fee
+
+2.	Soon after receiving the application, the Public Information Officer should check whether the applicant has made the payment of application fee or whether the applicant is a person belonging to a Below Poverty Line (BPL) category. If application is not accompanied by the prescribed fee or the BPL Certificate, it cannot be treated as an application under the RTI Act. It may, however, be noted that the Public Information Officer should consider such an application sympathetically and try to supply information sought by way of such an application.
+
+3.	A public authority may designate as many Public Information Officers for it, as it may deem necessary. It is possible that in a public authority with more than one Public Information Officer, an application is received by the Public Information Officer other than the concerned Public Information Officer. In such a case, the Public Information Officer receiving the application should transfer it to the concerned Public Information Officer immediately, preferably the same day. Time period of five days for transfer of the application applies only when the application is transferred from one public authority to another public authority and not for transfer from one Public Information Officer to another in the same public authority.
+
+Rendering Assistance to Applicants
+
+4.	The RTI Act provides that the Public Information Officer has a duty to render reasonable assistance to the persons seeking information. As per provisions of the Act, a person, who desires to obtain any information is required to make a request in writing or through electronic means in English or Hindi or in the official language of the area in which the application is made. If a person seeking information is not able to make such request in writing, the Public Information Officer should render reasonable assistance to him to reduce the same in writing.
+21
+ 
+5.	Where access to a record is required to be provided to a sensorily disabled person, the Public Information Officer should provide assistance to such person to enable him to access the information. He should also provide such assistance to the person as may be appropriate for the inspection of records where such inspection is involved.
+
+Assistance Available to PIO
+
+6.	The Public Information Officer may seek the assistance of any other officer as he or she considers necessary for the proper discharge of his or her duties. The officer, whose assistance is so sought by the Public Information Officer, would render all assistance to him. Such an officer shall be deemed to be a Public Information Officer and would be liable for contravention of any provisions of the Act the same way as any other Public Information Officer. It would be advisable for the Public Information Officer to inform the officer whose assistance is sought, about the above provision, at the time of seeking his assistance.
+
+7.	Some Public Information Officers, on the basis of above referred provision of the Act, transfer the RTI applications received by them to other officers and direct them to send information to the applicants as deemed Public Information Officer. Thus, they use the above referred provision to designate other officers as Public Information Officer. According to the Act, it is the responsibility of the officer who is designated as the Public Information Officer by the public authority to provide information to the applicant or reject the application for any reasons specified in Sections 8 and 9 of the Act. The Act enables the Public Information Officer to seek assistance of any other officer to enable him to provide information to the information seeker, but it does not give him authority to designate any other officer as Public Information Officer and direct him to send reply to the applicant. The import of the provision is that, if the officer whose assistance is sought by the Public Information Officer, does not render necessary help to him, the Information Commission may impose penalty on such officer or recommend disciplinary action against him the same way as the Commission may impose penalty on or recommend disciplinary action against the Public Information Officer.
+
+Supply of Information
+
+8.	The answering Public Information Officer should check whether the information sought or a part thereof is exempt from disclosure under Section 8 or Section 9 of the Act. Request in respect of the part of the application which is so exempt may be rejected and rest of the information should be provided immediately or after receipt of additional fees, as the case may be.
+
+
+
+22
+ 
+9.	Where a request for information is rejected, the Public Information Officer should communicate to the person making the request—
+(i)	the reasons for such rejection;
+(ii)	the period within which an appeal against such rejection may be preferred; and
+(iii)	the particulars of the authority to whom an appeal can be made.
+
+10.	If additional fee is required to be paid by the applicant as provided in the Fee and Cost Rules, the Public Information Officer should inform the applicant:
+(i)	the details of further fees required to be paid;
+(ii)	the calculations made to arrive at the amount of fees asked for;
+(iii)	the fact that the applicant has a right to make appeal about the amount of fees so demanded;
+(iv)	the particulars of the authority to whom such an appeal can be made; and
+(v)	the time limit within which the appeal can be made.
+11.	Though there is no hard and fast rule as to when exactly intimation about additional fees is to be given to the applicant, such intimation should be given soon after receipt of RTI application.
+
+Supply of Part Information by Severance
+
+12.	Where a request is received for access to information which is exempt from disclosure but a part of which is not exempt, and such part can be severed in such a way that the severed part does not contain exempt information then, access to that part of the information/record may be provided to the applicant. Where access is granted to a part of the record in such a way, the Public Information Officer should inform the applicant that the information asked for is exempt from disclosure and that only part of the record is being provided, after severance, which is not exempt from disclosure. While doing so, he should give the reasons for the decision, including any findings on any material question of fact, referring to the material on which those findings were based.
+
+
+Time Period for Supply of Information
+
+13.	The following table shows the maximum time (from the receipt of application) which may be taken to dispose off the applications in different situations:
+
+Sr.
+No.	Situation	Time limit for disposing
+off applications
+1.	Supply of information in normal course.	30 days
+2.	Supply of information if the application is
+received through APIO.	05 days shall be added to
+the time period indicated
+23
+ 
+
+		at Sr. No. 1
+3.	Supply of information if it concerns the life or
+liberty of a person	48 hours
+4.	Transfer	of	application	to	other	public
+authority under section 6(3) of the Act	05 days
+5.	Supply of information if application/request is received after transfer from another public authority:
+(a)	In normal course
+
+
+
+(b)	In case the information concerns the life or	liberty of a person.	
+
+
+(a)		Within 30 days of the receipt of the application by the concerned	public authority.
+(b)		Within 48 hours of receipt  of		the application by the concerned	public
+authority.
+6.	Supply of information where the applicant is asked to pay additional fee.	The period intervening between informing the applicant about additional fee and the receipt of such fee by the public authority shall be excluded for calculating the period of
+reply.
+7.	Supply of information by organizations specified in the Second Schedule:
+(a)	If information relates to allegations of violation of human rights (after approval of the Central Information Commission)
+(b)	In case information relates to allegations of corruption.	
+
+(a)		45	days	from	the receipt of application.
+
+
+(b)		Within 30 days of the receipt of application.
+
+14.	If the Public Information Officer fails to give decision on the request for information within the prescribed period, he shall be deemed to have refused the request. It is pertinent to note that if a public authority fails to comply with the specified time limit, the information to the concerned applicant would have to be provided free of charge.
+
+Disclosure of Third Party Information
+
+15.	Information including commercial confidence, trade secrets or intellectual property, the disclosure of which would harm the competitive position of a third party, is exempt from disclosure. Such information shall not be disclosed unless the competent
+24
+ 
+authority is satisfied that larger public interest warrants the disclosure of such information.
+
+16.	If an applicant seeks any information which relates to or has been supplied by a third party and that third party has treated that information as confidential, the Public Information Officer shall consider whether the information should be disclosed or not. The guiding principle in such cases is that except in the case of trade or commercial secrets protected by law, disclosure may be allowed if the public interest in disclosure outweighs in importance any possible harm or injury to the interests of such third party. However, the Public Information Officer would have to follow the following procedure before disclosing such information.
+
+17.	If the Public Information Officer intends to disclose the information, he shall within five days from the receipt of the application, give a written notice to the third party that the information has been sought by the applicant under the RTI Act and that he intends to disclose the information. He shall request the third party to make a submission in writing or orally, regarding whether the information may be disclosed. The third party shall be given a time of ten days, from the date of receipt of the notice by him, to make representation against the proposed disclosure, if any.
+
+18.	The Public Information Officer shall make a decision regarding disclosure of the information keeping in view the submission of the third party. Such a decision should be taken within forty days from the receipt of the request for information. After taking the decision, the Public Information Officer should give a notice of his decision to the third party in writing. The notice given to the third party should include a statement that the third party is entitled to prefer an appeal under section 19 against the decision.
+19.	The third party can prefer an appeal to the First Appellate Authority against the decision made by the Public Information Officer within thirty days from the date of the receipt of notice. If not satisfied with the decision of the First Appellate Authority, the third party can prefer a second appeal to the Information Commission.
+20.	If an appeal has been filed by the third party against the decision of the Public Information Officer to disclose the third party information, the information should not be disclosed till the appeal is decided.
+
+Imposition of Penalty
+21.	An applicant under the Act has a right to appeal to the Information Commission and also to make complaint to the Commission. Where the Information Commission at the time of deciding any complaint or appeal is of the opinion that the Public Information Officer has without any reasonable cause, refused to receive an application for information or has not furnished information within the time specified or malafidely denied the request for information or knowingly given incorrect, incomplete or misleading information or destroyed information which was the subject of the request or obstructed in any manner in furnishing the information, it shall impose a penalty of two hundred and fifty rupees each day till application is received or information is furnished
+25
+ 
+subject to the condition that the total amount of such penalty shall not exceed twenty-five thousand rupees. The Public Information Officer shall, however, be given a reasonable opportunity of being heard before any penalty is imposed on him. The burden of proving that he acted reasonably and diligently and in case of denial of a request that such denial was justified shall be on the Public Information Officer.
+Disciplinary Action Against PIO
+22.	Where the Information Commission at the time of deciding any complaint or appeal is of the opinion that the Public Information Officer has without any reasonable cause and persistently, failed to receive an application for information or has not furnished information within the time specified or malafidely denied the request for information or knowingly given incorrect, incomplete or misleading information or destroyed information which was the subject of the request or obstructed in any manner in furnishing the information, it may recommend disciplinary action against the Public Information Officer.
+
+Protection for Work Done in Good Faith
+
+
+23.	Section 21 of the Act provides that no suit, prosecution or other legal proceeding shall lie against any person for anything which is in good faith done or intended to be done under the Act or any rule made thereunder. A Public Information Officer should, however, note that it would be his responsibility to prove that his action was in good faith.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26
+ 
+Part V
+FOR FIRST APPELLATE AUTHORITIES
+
+
+The first Appellate Authority has a very important role under the RTI Act, 2005. The independent and judicious examination of appeals by the First Appellate Authorities would lead to higher satisfaction to the appellants. This would, in turn, result in less number of second appeals to the Information Commission.
+
+2.	The information sought by an applicant should either be supplied to him by the Public Information Officer or his application should be rejected within the time prescribed under the Act. If additional fee need be charged from the applicant, timely communication in this regard should be sent to him.
+
+First Appeal
+
+
+3.	If the applicant does not receive information or decision about rejection of request or communication about payment of additional fee within the specified time, he can make an appeal to the First Appellate Authority. Appeal can also be made if the applicant is aggrieved by the decision of the Public Information Officer regarding supply of information or the quantum of fee decided by the Public Information Officer. The applicant may prefer the first appeal within thirty days from the expiry of such period or from the receipt of such a decision of the Public Information Officer.
+
+4.	The First Appellate Authority may admit the appeal after expiry of the period of thirty days if he or she is satisfied that the appellant was prevented by sufficient cause from filing the appeal in time.
+
+5.	A third party can also prefer an appeal to the First Appellate Authority against the order of the Public Information Officer to disclose third party information. Such an appeal shall be made within thirty days from the date of the order.
+Disposal of Appeal
+
+6.	While disposing off first appeals, the first Appellate Authorities should act in a fair and judicious manner. It is very important that the order passed by the first appellate authority should be a detailed and speaking order, giving justification for the decision arrived at.
+
+7.	If an appellate authority while deciding an appeal comes to a conclusion that the appellant should be supplied information in addition to what has been supplied by the
+27
+ 
+Public Information Officer, he may either (i) pass an order directing the Public Information Officer to give such information to the appellant; or (ii) he himself may give information to the appellant. In the first case the appellate authority should ensure that the information ordered by him to be supplied is supplied to the appellant immediately. It would, however, be better if the appellate authority chooses the second course of action and he himself furnishes the information alongwith the order passed by him in the matter.
+
+8.	If, in any case, the Public Information Officer does not implement the order passed by the appellate authority and the appellate authority feels that intervention of higher authority is required to get his order implemented, he should bring the matter to the notice of the officer in the public authority competent to take action against the Public Information Officer. Such competent officer shall take necessary action so as to ensure implementation of the provisions of the RTI Act.
+
+Time limit for disposal of appeal
+
+9.	The first appellate authority should dispose off the appeal within 30 days of receipt of the appeal. In some exceptional cases, the Appellate Authority may take 45 days for its disposal. However, in such cases, the Appellate Authority should record, in writing, the reasons for not deciding the appeal within 30 days.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+28
