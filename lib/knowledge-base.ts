@@ -1,6 +1,6 @@
 /**
  * Knowledge Base Client for Supabase pgvector semantic search.
- * Provides vector similarity search over legal text chunks and embedding generation.
+ * Supports both pure vector search and hybrid search (vector + full-text keyword).
  * Requirements: 12.1, 12.2, 12.3, 12.4, 12.5
  */
 
@@ -30,6 +30,7 @@ export interface VectorSearchParams {
   legalDomain: LegalDomain;
   similarityThreshold: number;
   maxResults: number; // max 20
+  queryText?: string; // For hybrid search (keyword matching)
 }
 
 /**
@@ -79,6 +80,7 @@ export class KnowledgeBaseClient {
   /**
    * Performs a vector similarity search against the legal_chunks table
    * using the match_legal_chunks RPC function.
+   * If queryText is provided and hybrid search is available, uses hybrid search.
    *
    * Results are sorted by cosine similarity in descending order.
    * Returns at most 20 chunks.
@@ -93,6 +95,22 @@ export class KnowledgeBaseClient {
 
     for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
       try {
+        // Try hybrid search first if queryText is provided
+        if (params.queryText) {
+          try {
+            const hybridResult = await this.executeHybridSearch(
+              params.queryEmbedding,
+              params.queryText,
+              params.similarityThreshold,
+              maxResults,
+              actName
+            );
+            return hybridResult;
+          } catch {
+            // Fall back to pure vector search if hybrid isn't available
+          }
+        }
+
         const result = await this.executeSearch(
           params.queryEmbedding,
           params.similarityThreshold,
@@ -104,7 +122,6 @@ export class KnowledgeBaseClient {
         lastError =
           error instanceof Error ? error.message : 'Unknown search error';
 
-        // If we have retries remaining, wait with exponential backoff
         if (attempt < MAX_RETRIES) {
           const delay = INITIAL_RETRY_DELAY_MS * Math.pow(2, attempt);
           await this.sleep(delay);
@@ -112,7 +129,6 @@ export class KnowledgeBaseClient {
       }
     }
 
-    // All retries exhausted
     return {
       chunks: [],
       status: 'search_error',
@@ -224,6 +240,60 @@ export class KnowledgeBaseClient {
       chunks,
       status: 'success',
     };
+  }
+
+  /**
+   * Executes hybrid search combining vector similarity + full-text keyword matching.
+   * Uses the hybrid_search_legal_chunks RPC function.
+   */
+  private async executeHybridSearch(
+    queryEmbedding: number[],
+    queryText: string,
+    matchThreshold: number,
+    matchCount: number,
+    filterActName: string
+  ): Promise<VectorSearchResult> {
+    const { data, error } = await this.supabase.rpc('hybrid_search_legal_chunks', {
+      query_embedding: queryEmbedding,
+      query_text: queryText,
+      match_threshold: matchThreshold,
+      match_count: matchCount,
+      filter_act_name: filterActName,
+      vector_weight: 0.7,
+      keyword_weight: 0.3,
+    });
+
+    if (error) {
+      throw new Error(`Hybrid search RPC error: ${error.message}`);
+    }
+
+    if (!data || data.length === 0) {
+      return { chunks: [], status: 'no_matches' };
+    }
+
+    const chunks: LegalChunk[] = data.map(
+      (row: {
+        id: string;
+        content: string;
+        act_name: string;
+        section_number: string;
+        chapter: string;
+        similarity: number;
+        hybrid_score: number;
+      }) => ({
+        id: row.id,
+        content: row.content,
+        embedding: [],
+        metadata: {
+          actName: row.act_name,
+          sectionNumber: row.section_number,
+          chapter: row.chapter,
+        },
+        similarityScore: row.hybrid_score, // Use hybrid score as the similarity
+      })
+    );
+
+    return { chunks, status: 'success' };
   }
 
   /**

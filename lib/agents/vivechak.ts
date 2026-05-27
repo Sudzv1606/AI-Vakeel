@@ -31,10 +31,11 @@ You MUST classify the case into exactly ONE of these legal domains:
 FORUM SELECTION RULES:
 
 For Consumer Protection Act 2019:
-- District Forum (District Consumer Disputes Redressal Forum): If the claimed compensation value is up to ₹1 crore (≤ ₹1,00,00,000)
+- District Commission (District Consumer Disputes Redressal Commission): If the claimed compensation value is up to ₹1 crore (≤ ₹1,00,00,000)
 - State Commission (State Consumer Disputes Redressal Commission): If the claimed compensation value is above ₹1 crore and up to ₹10 crore (> ₹1,00,00,000 and ≤ ₹10,00,00,000)
 - National Commission (National Consumer Disputes Redressal Commission): If the claimed compensation value is above ₹10 crore (> ₹10,00,00,000)
-- If the compensation value cannot be determined from the facts, default to "District Consumer Disputes Redressal Forum" and note this in reasoning.
+- If the compensation value cannot be determined from the facts, default to "District Consumer Disputes Redressal Commission" and note this in reasoning.
+- IMPORTANT: Under CPA 2019, the body is called "Commission" NOT "Forum". The term "Forum" was used under the repealed 1986 Act. NEVER use "Forum".
 
 For RERA Act 2016:
 - Forum: "RERA Authority of [state name]" where the real estate project is located
@@ -64,7 +65,9 @@ Response format:
   "confidenceScore": <0.0 to 1.0>,
   "requiresUserConfirmation": true | false,
   "reasoning": "<explanation of classification and forum selection>"
-}`;
+}
+
+You must respond with a single JSON object. Do not include markdown code blocks. Do not include any text before or after the JSON. Begin your response with { and end with }.`;
 
 // --- Agent Implementation ---
 
@@ -206,7 +209,14 @@ export class VivechakAgent implements BaseAgent<VivechakInput, VivechakOutput> {
 
     let message = 'Please classify the following legal case and select the appropriate forum.\n\n';
     message += `Complainant: ${facts.complainantName}\n`;
-    message += `Respondent: ${facts.respondentName}\n`;
+    if (facts.allOppositeParties && facts.allOppositeParties.length > 0) {
+      message += `All Opposite Parties:\n`;
+      facts.allOppositeParties.forEach((p, i) => {
+        message += `  ${i + 1}. ${p.name} (${p.role} - ${p.liabilityType})\n`;
+      });
+    } else {
+      message += `Respondent: ${facts.respondentName}\n`;
+    }
     message += `Incident Dates: ${Array.isArray(facts.incidentDates) ? facts.incidentDates.join(', ') : facts.incidentDates}\n`;
     message += `Grievance Summary: ${facts.grievanceSummary}\n`;
     message += `Relief Sought: ${facts.reliefSought}\n`;

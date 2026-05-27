@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createSupabaseBrowserClient } from '@/lib/supabase/client';
+import { ScalesIcon } from '@/components/icons';
 import type { User } from '@supabase/supabase-js';
 
 interface HeaderProps {
@@ -40,13 +41,15 @@ export default function Header({ onHelpClick }: HeaderProps) {
   }
 
   return (
-    <header className="bg-gradient-to-r from-navy-900 to-navy-800 text-white shadow-lg">
-      <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <span className="text-3xl" role="img" aria-label="scales of justice">⚖️</span>
+    <header className="bg-gradient-to-r from-navy-900 via-navy-900 to-navy-800 text-white header-glow relative">
+      {/* Subtle bottom border glow */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent opacity-60" />
+      <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div className="flex items-center gap-3.5">
+          <ScalesIcon className="w-8 h-8 text-gold-400" />
           <div>
             <h1 className="text-xl font-bold tracking-tight">AI Vakeel</h1>
-            <p className="text-xs text-amber-300 font-medium tracking-wide">
+            <p className="text-xs text-gold-400 font-medium tracking-wide">
               Vakeel Panch: Your AI Legal Team
             </p>
           </div>
@@ -72,7 +75,7 @@ export default function Header({ onHelpClick }: HeaderProps) {
             <div className="flex items-center gap-3 ml-2 pl-3 border-l border-white/20">
               <a
                 href="/profile"
-                className="text-xs text-slate-300 hover:text-amber-300 transition-colors hidden sm:inline max-w-[150px] truncate"
+                className="text-xs text-slate-300 hover:text-gold-400 transition-colors hidden sm:inline max-w-[150px] truncate"
                 title={user.email || ''}
               >
                 {getDisplayName(user)}

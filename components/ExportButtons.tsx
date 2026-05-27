@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { DownloadIcon, CopyIcon } from '@/components/icons';
 
 interface ExportButtonsProps {
   document: string;
@@ -8,13 +9,14 @@ interface ExportButtonsProps {
 }
 
 /**
- * Download PDF button and copy-to-clipboard button with 3-second confirmation.
- * Styled as a toolbar group.
+ * Download PDF button, copy-to-clipboard button, and share button.
+ * Styled as a pill-shaped toolbar group.
  */
 export default function ExportButtons({ document, sessionId }: ExportButtonsProps) {
   const [copied, setCopied] = useState(false);
   const [downloading, setDownloading] = useState(false);
   const [downloadError, setDownloadError] = useState('');
+  const [shareTooltip, setShareTooltip] = useState(false);
 
   async function handleDownloadPdf() {
     setDownloading(true);
@@ -88,41 +90,42 @@ export default function ExportButtons({ document, sessionId }: ExportButtonsProp
     }
   }
 
+  function handleShare() {
+    setShareTooltip(true);
+    setTimeout(() => setShareTooltip(false), 2500);
+  }
+
   return (
     <div className="flex items-center gap-2">
-      {/* Toolbar container */}
-      <div className="inline-flex items-center rounded-lg border border-slate-200 bg-slate-50 p-1 gap-1">
+      {/* Pill-shaped toolbar container */}
+      <div className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50/80 p-1 gap-0.5">
         <button
           onClick={handleDownloadPdf}
           disabled={downloading}
-          className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-700 bg-white rounded-md shadow-sm border border-slate-200 hover:bg-slate-50 hover:border-slate-300 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+          className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-700 bg-white rounded-full shadow-sm border border-slate-200/80 hover:bg-slate-50 hover:border-gold-400/50 hover:text-gold-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
           aria-label="Download complaint as PDF"
         >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-          </svg>
+          <DownloadIcon className="w-4 h-4" />
           {downloading ? 'Preparing...' : 'PDF'}
         </button>
 
         <button
           onClick={handleDownloadText}
-          className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-700 bg-white rounded-md shadow-sm border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all"
+          className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-700 bg-white rounded-full shadow-sm border border-slate-200/80 hover:bg-slate-50 hover:border-gold-400/50 hover:text-gold-600 transition-all"
           aria-label="Download complaint as text file"
         >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
+          <DownloadIcon className="w-4 h-4" />
           .txt
         </button>
 
-        <div className="w-px h-6 bg-slate-200" />
+        <div className="w-px h-5 bg-slate-200 mx-0.5" />
 
         <button
           onClick={handleCopy}
-          className={`inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md shadow-sm border transition-all ${
+          className={`inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full shadow-sm border transition-all ${
             copied
               ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-              : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+              : 'bg-white text-slate-700 border-slate-200/80 hover:bg-slate-50 hover:border-gold-400/50 hover:text-gold-600'
           }`}
           aria-label={copied ? 'Copied to clipboard' : 'Copy complaint text to clipboard'}
         >
@@ -135,17 +138,38 @@ export default function ExportButtons({ document, sessionId }: ExportButtonsProp
             </>
           ) : (
             <>
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
+              <CopyIcon className="w-4 h-4" />
               Copy
             </>
           )}
         </button>
+
+        <div className="w-px h-5 bg-slate-200 mx-0.5" />
+
+        {/* Share button */}
+        <div className="relative">
+          <button
+            onClick={handleShare}
+            className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-700 bg-white rounded-full shadow-sm border border-slate-200/80 hover:bg-slate-50 hover:border-gold-400/50 hover:text-gold-600 transition-all"
+            aria-label="Share document"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 0m-3.935 0a2.25 2.25 0 00-3.935 0m3.935-12.628a2.25 2.25 0 103.935 0m-3.935 0a2.25 2.25 0 00-3.935 0" />
+            </svg>
+            Share
+          </button>
+          {/* Tooltip */}
+          {shareTooltip && (
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-navy-900 text-white text-xs rounded-lg whitespace-nowrap animate-fade-in shadow-lg">
+              Coming soon
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-navy-900 rotate-45 -mt-1" />
+            </div>
+          )}
+        </div>
       </div>
 
       {downloadError && (
-        <span className="text-xs text-amber-600 font-medium">{downloadError}</span>
+        <span className="text-xs text-red-500 font-medium">{downloadError}</span>
       )}
     </div>
   );

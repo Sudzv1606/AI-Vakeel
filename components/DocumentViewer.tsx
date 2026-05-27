@@ -1,5 +1,7 @@
 'use client';
 
+import { GavelIcon } from '@/components/icons';
+
 interface DocumentViewerProps {
   document: string | null;
   qualityScore?: number;
@@ -14,22 +16,47 @@ export default function DocumentViewer({ document }: DocumentViewerProps) {
     return null;
   }
 
+  const lines = document.split('\n');
+
   return (
     <div className="w-full max-w-3xl animate-fade-in">
-      <div className="flex items-center gap-2 mb-4">
-        <span className="text-lg">📄</span>
+      {/* Legal document header bar */}
+      <div className="flex items-center gap-3 mb-4 px-1">
+        <div className="flex items-center gap-2 text-gold-500">
+          <GavelIcon className="w-5 h-5" />
+        </div>
         <h2 className="text-lg font-bold text-slate-900">
-          Generated Complaint Document
+          Generated Complaint
         </h2>
+        <div className="flex-1 h-px bg-gradient-to-r from-gold-400/40 to-transparent" />
       </div>
+
       {/* Paper container */}
-      <div className="bg-white border border-slate-200 rounded-xl shadow-document overflow-hidden">
+      <div className="bg-white border border-slate-200/80 rounded-xl shadow-document overflow-hidden">
         {/* Paper header accent */}
-        <div className="h-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600" />
-        {/* Document content */}
-        <div className="p-8 max-h-[600px] overflow-y-auto bg-gradient-to-b from-white to-slate-50/50">
-          <div className="prose prose-sm max-w-none font-serif">
-            <MarkdownRenderer content={document} />
+        <div className="h-1 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400" />
+
+        {/* Document content with line numbers */}
+        <div className="max-h-[600px] overflow-y-auto paper-texture">
+          <div className="flex">
+            {/* Line numbers */}
+            <div className="flex-shrink-0 py-8 pl-3 pr-2 border-r border-slate-100 select-none">
+              {lines.map((_, i) => (
+                <div
+                  key={i}
+                  className="text-[10px] text-slate-300 font-mono leading-[1.75rem] text-right w-6"
+                >
+                  {i + 1}
+                </div>
+              ))}
+            </div>
+
+            {/* Document content */}
+            <div className="flex-1 p-8 pl-6">
+              <div className="prose prose-sm max-w-none font-serif">
+                <MarkdownRenderer content={document} />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -62,8 +89,9 @@ function MarkdownRenderer({ content }: { content: string }) {
       elements.push(
         <h3
           key={key++}
-          className="text-lg font-bold text-slate-900 mt-8 mb-3 pb-2 border-b border-amber-200 font-sans"
+          className="text-lg font-bold text-slate-900 mt-8 mb-3 pb-2 border-b border-gold-400/30 font-sans flex items-center gap-2"
         >
+          <span className="w-1 h-5 bg-gold-400 rounded-full inline-block" />
           {trimmed.slice(3)}
         </h3>
       );
@@ -71,7 +99,7 @@ function MarkdownRenderer({ content }: { content: string }) {
       elements.push(
         <h2
           key={key++}
-          className="text-xl font-bold text-slate-900 mt-8 mb-4 pb-2 border-b-2 border-amber-400 font-sans"
+          className="text-xl font-bold text-slate-900 mt-8 mb-4 pb-2 border-b-2 border-gold-400 font-sans"
         >
           {trimmed.slice(2)}
         </h2>
@@ -82,7 +110,7 @@ function MarkdownRenderer({ content }: { content: string }) {
       // Render bold text within paragraphs
       const parts = trimmed.split(/\*\*(.*?)\*\*/g);
       elements.push(
-        <p key={key++} className="mb-2 leading-relaxed text-slate-800 text-[15px]">
+        <p key={key++} className="mb-2 leading-[1.75rem] text-slate-800 text-[15px]">
           {parts.map((part, i) =>
             i % 2 === 1 ? (
               <strong key={i} className="font-bold text-slate-900">{part}</strong>

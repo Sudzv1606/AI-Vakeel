@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
     const agents = {
       arzdar: new ArzdarAgent(openRouterClient),
       vivechak: new VivechakAgent(openRouterClient),
-      shodhak: new ShodhakAgent(kbClient),
+      shodhak: new ShodhakAgent(kbClient, openRouterClient),
       munshi: new MunshiAgent(openRouterClient),
       nyayadoot: new NyayadootAgent(openRouterClient),
     };

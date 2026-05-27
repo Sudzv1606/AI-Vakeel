@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { QuillIcon, RoutingIcon, MagnifyingGlassBookIcon, ScrollIcon, ClipboardCheckIcon, SpinnerIcon } from '@/components/icons';
 import type { AgentName, AgentStatus } from '@/lib/agents/base-agent';
 
 interface AgentCardProps {
@@ -13,17 +14,17 @@ interface AgentCardProps {
 
 const STATUS_CONFIG: Record<AgentStatus, { border: string; bg: string; text: string; label: string }> = {
   Waiting: { border: 'border-l-slate-300', bg: 'bg-slate-50', text: 'text-slate-500', label: 'Waiting' },
-  Running: { border: 'border-l-blue-500', bg: 'bg-blue-50', text: 'text-blue-700', label: 'Running' },
+  Running: { border: 'border-l-gold-400', bg: 'bg-amber-50', text: 'text-gold-600', label: 'Running' },
   Done: { border: 'border-l-emerald-500', bg: 'bg-emerald-50', text: 'text-emerald-700', label: 'Done' },
   Error: { border: 'border-l-red-500', bg: 'bg-red-50', text: 'text-red-700', label: 'Error' },
 };
 
-const AGENT_ICONS: Record<AgentName, string> = {
-  Arzdar: '📋',
-  Vivechak: '🔀',
-  Shodhak: '🔍',
-  Munshi: '✍️',
-  Nyayadoot: '✅',
+const AGENT_ICONS: Record<AgentName, React.ReactNode> = {
+  Arzdar: <QuillIcon className="w-5 h-5" />,
+  Vivechak: <RoutingIcon className="w-5 h-5" />,
+  Shodhak: <MagnifyingGlassBookIcon className="w-5 h-5" />,
+  Munshi: <ScrollIcon className="w-5 h-5" />,
+  Nyayadoot: <ClipboardCheckIcon className="w-5 h-5" />,
 };
 
 const AGENT_DESCRIPTIONS: Record<AgentName, string> = {
@@ -43,11 +44,23 @@ export default function AgentCard({ name, status, summary, output, error }: Agen
 
   return (
     <div
-      className={`border border-slate-200 ${config.border} border-l-4 rounded-lg p-4 bg-white shadow-card transition-all duration-200 hover:shadow-card-hover`}
+      className={`border border-slate-200/80 ${config.border} border-l-4 rounded-lg p-4 bg-white shadow-card transition-all duration-200 hover:shadow-card-hover ${
+        status === 'Running' ? 'animate-shimmer' : ''
+      }`}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="text-xl" role="img" aria-hidden="true">
+          <span
+            className={`flex items-center justify-center w-9 h-9 rounded-lg ${
+              status === 'Done'
+                ? 'bg-emerald-50 text-emerald-600'
+                : status === 'Running'
+                ? 'bg-amber-50 text-gold-500'
+                : status === 'Error'
+                ? 'bg-red-50 text-red-500'
+                : 'bg-slate-50 text-slate-400'
+            } transition-colors`}
+          >
             {AGENT_ICONS[name]}
           </span>
           <div>
@@ -67,10 +80,7 @@ export default function AgentCard({ name, status, summary, output, error }: Agen
             </svg>
           )}
           {status === 'Running' && (
-            <svg className="w-3 h-3 animate-spin-slow" viewBox="0 0 24 24" fill="none">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-            </svg>
+            <SpinnerIcon className="w-3 h-3" />
           )}
           {status === 'Done' && (
             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -88,9 +98,14 @@ export default function AgentCard({ name, status, summary, output, error }: Agen
 
       {/* Summary */}
       {status === 'Done' && truncatedSummary && (
-        <p className="mt-3 text-sm text-slate-600 leading-relaxed animate-fade-in">
-          {truncatedSummary}
-        </p>
+        <div className="mt-3 animate-fade-in">
+          <p className="text-sm text-slate-600 leading-relaxed">
+            {truncatedSummary}
+          </p>
+          <span className="inline-block mt-1.5 text-[10px] text-slate-400 font-medium">
+            ✓ Completed
+          </span>
+        </div>
       )}
 
       {/* Error */}
@@ -105,7 +120,7 @@ export default function AgentCard({ name, status, summary, output, error }: Agen
         <div className="mt-3">
           <button
             onClick={() => setExpanded(!expanded)}
-            className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors"
+            className="inline-flex items-center gap-1 text-sm text-gold-500 hover:text-gold-600 font-medium transition-colors"
             aria-expanded={expanded}
             aria-controls={`agent-output-${name}`}
           >
@@ -120,16 +135,18 @@ export default function AgentCard({ name, status, summary, output, error }: Agen
             </svg>
             {expanded ? 'Hide output' : 'Show output'}
           </button>
-          {expanded && (
-            <div className="animate-slide-down">
-              <pre
-                id={`agent-output-${name}`}
-                className="mt-2 p-4 bg-slate-50 border border-slate-100 rounded-lg text-xs text-slate-700 overflow-x-auto max-h-96 overflow-y-auto font-mono"
-              >
-                {typeof output === 'string' ? output : JSON.stringify(output, null, 2)}
-              </pre>
-            </div>
-          )}
+          <div
+            className={`transition-height overflow-hidden ${
+              expanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <pre
+              id={`agent-output-${name}`}
+              className="mt-2 p-4 bg-slate-50 border border-slate-100 rounded-lg text-xs text-slate-700 overflow-x-auto max-h-96 overflow-y-auto font-mono"
+            >
+              {typeof output === 'string' ? output : JSON.stringify(output, null, 2)}
+            </pre>
+          </div>
         </div>
       )}
     </div>

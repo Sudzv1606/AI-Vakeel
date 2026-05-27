@@ -15,6 +15,7 @@ import type { ArzdarOutput } from '../schemas/arzdar-schema';
 import type { BaseAgent, AgentExecutionResult, JSONSchema } from './base-agent';
 import type { LegalDomain } from '../types';
 import { OpenRouterClient, type ChatMessage } from '../openrouter-client';
+import { NYAYADOOT_CHECKLISTS, SECTION_CITATION_RULES, getDomainKey } from './rules';
 
 // --- Interfaces ---
 
@@ -90,7 +91,9 @@ Response format:
     }
   ],
   "finalDocument": "<the document, corrected if needed, or original if approved>"
-}`;
+}
+
+You must respond with a single JSON object. Do not include markdown code blocks. Do not include any text before or after the JSON. Begin your response with { and end with }.`;
 
 // --- Agent Implementation ---
 
@@ -147,7 +150,10 @@ export class NyayadootAgent implements BaseAgent<NyayadootInput, NyayadootOutput
     const startTime = Date.now();
 
     try {
-      const messages = this.buildMessages(input);
+      // Run programmatic checks before LLM call
+      const programmaticIssues = this.programmaticCheck(input.complaintDocument, input.legalDomain, input.extractedFacts);
+
+      const messages = this.buildMessages(input, programmaticIssues);
       const response = await this.client.chatCompletion(messages);
 
       // Extract content from LLM response
@@ -232,12 +238,87 @@ export class NyayadootAgent implements BaseAgent<NyayadootInput, NyayadootOutput
   }
 
   /**
+   * Programmatic pre-checks that run BEFORE the LLM call.
+   * Catches deterministic errors that don't need LLM reasoning.
+   */
+  private programmaticCheck(document: string, legalDomain: string, extractedFacts?: ArzdarOutput): Array<{section: string; deficiencyType: string; description: string; suggestedCorrection: string}> {
+    const issues: Array<{section: string; deficiencyType: string; description: string; suggestedCorrection: string}> = [];
+
+    // Check for "Forum" instead of "Commission" (CPA 2019)
+    if (legalDomain.includes('consumer') && /forum/i.test(document) && !/information/i.test(document)) {
+      issues.push({
+        section: 'Header',
+        deficiencyType: 'formatting_error',
+        description: 'Uses "Forum" instead of "Commission". CPA 2019 uses Commission.',
+        suggestedCorrection: 'Replace all instances of "Forum" with "Commission"',
+      });
+    }
+
+    // Check for forbidden Section 36
+    if (legalDomain.includes('consumer') && /section\s*36/i.test(document) && !/section\s*36.*proceedings/i.test(document)) {
+      issues.push({
+        section: 'Legal Grounds',
+        deficiencyType: 'incorrect_reference',
+        description: 'Section 36 cited. This section is about Commission composition, not unfair trade practices.',
+        suggestedCorrection: 'Remove Section 36 citation. Use Section 2(47) for unfair trade practices.',
+      });
+    }
+
+    // Check for forbidden Section 89 in consumer complaints
+    if (legalDomain.includes('consumer') && /section\s*89/i.test(document)) {
+      issues.push({
+        section: 'Legal Grounds',
+        deficiencyType: 'incorrect_reference',
+        description: 'Section 89 cited. This is a criminal penalty for false advertising, not relevant to consumer complaints.',
+        suggestedCorrection: 'Remove Section 89. Use Section 83/84/86 for product liability.',
+      });
+    }
+
+    // Check interest rate > 9%
+    const interestMatch = document.match(/(\d+)%\s*(?:per annum|p\.?a\.?)/i);
+    if (interestMatch && parseInt(interestMatch[1]) > 9) {
+      issues.push({
+        section: 'Prayer Clause',
+        deficiencyType: 'factual_inconsistency',
+        description: `Interest rate of ${interestMatch[1]}% is too high. Consumer Commissions award 6-9%.`,
+        suggestedCorrection: 'Change to "9% per annum or such rate as the Commission deems fit"',
+      });
+    }
+
+    // Check for Section 21 in RTI
+    if (legalDomain.includes('rti') && /section\s*21/i.test(document)) {
+      issues.push({
+        section: 'Legal Grounds',
+        deficiencyType: 'incorrect_reference',
+        description: 'Section 21 cited. This protects officers, not applicants.',
+        suggestedCorrection: 'Remove Section 21 citation.',
+      });
+    }
+
+    // Check all opposite parties are named in the document
+    if (extractedFacts?.allOppositeParties && extractedFacts.allOppositeParties.length > 1) {
+      extractedFacts.allOppositeParties.forEach((party, i) => {
+        if (party.name !== 'not provided' && !document.includes(party.name)) {
+          issues.push({
+            section: 'Header / Parties',
+            deficiencyType: 'missing_element',
+            description: `${party.name} (${party.role}) is named in the complaint facts but missing from the document as Opposite Party ${i + 1}.`,
+            suggestedCorrection: `Add ${party.name} as Opposite Party ${i + 1} and cite ${party.liabilityType === 'product_manufacturer' ? 'Section 84' : 'Section 86'}.`,
+          });
+        }
+      });
+    }
+
+    return issues;
+  }
+
+  /**
    * Build chat messages for the LLM request.
    */
-  private buildMessages(input: NyayadootInput): ChatMessage[] {
+  private buildMessages(input: NyayadootInput, programmaticIssues: Array<{section: string; deficiencyType: string; description: string; suggestedCorrection: string}>): ChatMessage[] {
     const messages: ChatMessage[] = [
       { role: 'system', content: this.systemPrompt },
-      { role: 'user', content: this.buildUserMessage(input) },
+      { role: 'user', content: this.buildUserMessage(input, programmaticIssues) },
     ];
 
     return messages;
@@ -245,18 +326,45 @@ export class NyayadootAgent implements BaseAgent<NyayadootInput, NyayadootOutput
 
   /**
    * Build the user message incorporating the document and facts for review.
+   * Injects section citation rules, domain-specific review checklist, and programmatic pre-check results.
    */
-  private buildUserMessage(input: NyayadootInput): string {
+  private buildUserMessage(input: NyayadootInput, programmaticIssues: Array<{section: string; deficiencyType: string; description: string; suggestedCorrection: string}>): string {
     const { complaintDocument, legalDomain, extractedFacts } = input;
+    const domainKey = getDomainKey(legalDomain);
 
     let message = 'Please review the following legal complaint document for quality.\n\n';
+
+    // Inject programmatic pre-check results if any
+    if (programmaticIssues.length > 0) {
+      message += `## KNOWN ISSUES (already detected programmatically, MUST include in your issues list)\n`;
+      programmaticIssues.forEach((issue, i) => {
+        message += `${i + 1}. [${issue.section}] ${issue.deficiencyType}: ${issue.description} → Fix: ${issue.suggestedCorrection}\n`;
+      });
+      message += `\nThese issues are CONFIRMED defects. Include them in your issues array and deduct points accordingly.\n\n`;
+    }
+
+    // Inject verified section citation rules (so Nyayadoot knows what's correct)
+    message += `## VERIFIED SECTION CITATION RULES (use to verify correctness)\n${SECTION_CITATION_RULES}\n\n`;
+
+    // Inject domain-specific review checklist
+    const checklist = NYAYADOOT_CHECKLISTS[domainKey];
+    if (checklist) {
+      message += `## DOMAIN-SPECIFIC REVIEW CHECKLIST (score against this)\n${checklist}\n\n`;
+    }
 
     message += `## Legal Domain\n`;
     message += `Domain: ${legalDomain}\n\n`;
 
     message += `## Extracted Facts (for consistency check)\n`;
     message += `Complainant: ${extractedFacts.complainantName}\n`;
-    message += `Respondent: ${extractedFacts.respondentName}\n`;
+    if (extractedFacts.allOppositeParties && extractedFacts.allOppositeParties.length > 0) {
+      message += `All Opposite Parties (ALL must appear in document):\n`;
+      extractedFacts.allOppositeParties.forEach((p, i) => {
+        message += `  ${i + 1}. ${p.name} - ${p.role} - liability: ${p.liabilityType}\n`;
+      });
+    } else {
+      message += `Respondent: ${extractedFacts.respondentName}\n`;
+    }
     message += `Incident Dates: ${Array.isArray(extractedFacts.incidentDates) ? extractedFacts.incidentDates.join(', ') : extractedFacts.incidentDates}\n`;
     message += `Grievance Summary: ${extractedFacts.grievanceSummary}\n`;
     message += `Relief Sought: ${extractedFacts.reliefSought}\n`;

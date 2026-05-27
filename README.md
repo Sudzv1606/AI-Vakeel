@@ -11,15 +11,17 @@ AI Vakeel uses five specialized AI agents (collectively called "Vakeel Panch") t
 ## How It Works
 
 ```
-User describes problem → Arzdar → Vivechak → Shodhak → Munshi → Nyayadoot → Legal Complaint
+User describes problem → Query Expansion → HyDE → Hybrid Search → LLM Re-ranking
+                       → Arzdar → Vivechak → Shodhak → Munshi → Nyayadoot
+                       → Legal Complaint Document
 ```
 
 | Agent | Role | What It Does |
 |-------|------|-------------|
 | **Arzdar** | Intake Agent | Extracts key facts (names, dates, grievance, relief sought) from natural language input |
 | **Vivechak** | Router Agent | Classifies the case under the correct law and selects the appropriate forum |
-| **Shodhak** | Research Agent | Performs RAG-based vector search to find relevant legal sections |
-| **Munshi** | Draft Agent | Generates a properly formatted legal complaint document |
+| **Shodhak** | Research Agent | Advanced RAG pipeline: query expansion, HyDE, hybrid search, LLM re-ranking |
+| **Munshi** | Draft Agent | Generates a properly formatted legal complaint document with affidavit |
 | **Nyayadoot** | Review Agent | Reviews the draft for completeness and assigns a quality score |
 
 ## Supported Legal Domains
@@ -32,13 +34,19 @@ User describes problem → Arzdar → Vivechak → Shodhak → Munshi → Nyayad
 
 - Multi-language input support (English and Hindi)
 - Real-time agent progress streaming via SSE
-- Vector similarity search over legal texts (Supabase pgvector)
+- **Advanced RAG pipeline:**
+  - LLM Query Expansion (reformulates into legal terminology)
+  - HyDE (Hypothetical Document Embedding for better semantic matching)
+  - Hybrid Search (vector similarity + full-text keyword matching)
+  - LLM Re-ranking (evaluates actual relevance to the specific case)
+  - Section-aware chunking with metadata-enriched embeddings
 - Domain-specific complaint formatting (CDRC, RERA Authority, RTI PIO formats)
-- Quality scoring with 4-category evaluation
-- PDF export and clipboard copy
+- Mandatory legal elements: affidavit, jurisdiction statement, limitation period, annexures list
+- Quality scoring with 4-category evaluation (completeness, legal validity, formatting, factual consistency)
+- PDF export (via browser print) and clipboard copy
 - Session history with persistence
-- User authentication (Supabase Auth)
-- Profile management
+- User authentication (Supabase Auth) with Row Level Security
+- Profile management (first name, last name, phone)
 - Onboarding walkthrough (English, Hindi, Marathi)
 
 ---
@@ -146,13 +154,30 @@ Download the legal texts as `.txt` files and place them in the `/data/` folder:
 - `data/rera_act_2016.txt`
 - `data/rti_act_2005.txt`
 
-Then run the ingestion script:
+Then run the v2 ingestion script (section-aware chunking + metadata-enriched embeddings):
 
 ```bash
-npx tsx scripts/ingest-legal-texts.ts
+npx tsx scripts/ingest-legal-texts-v2.ts
 ```
 
-This chunks the texts, generates embeddings, and uploads them to Supabase pgvector.
+This:
+- Splits text on legal section boundaries (not arbitrary character counts)
+- Prepends "Act Name, Section X, Chapter Y:" to each chunk before embedding
+- Generates embeddings via OpenRouter API
+- Uploads to Supabase pgvector
+
+### 5. Set Up Hybrid Search
+
+Run this SQL in your Supabase Dashboard SQL Editor (Settings > SQL Editor):
+
+```sql
+ALTER TABLE legal_chunks ADD COLUMN IF NOT EXISTS fts tsvector
+  GENERATED ALWAYS AS (to_tsvector('english', content)) STORED;
+
+CREATE INDEX IF NOT EXISTS idx_legal_chunks_fts ON legal_chunks USING gin(fts);
+```
+
+Then create the `hybrid_search_legal_chunks` function (see `supabase/migrations/003_hybrid_search.sql`).
 
 ### 5. Enable Authentication
 
@@ -225,6 +250,60 @@ Open [http://localhost:3000](http://localhost:3000)
 └── tests/                       # Unit + property-based tests
 ```
 
+## RAG Pipeline Architecture
+
+The Shodhak agent implements a state-of-the-art retrieval pipeline:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Shodhak RAG Pipeline                       │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  User's Problem Description                                  │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌─────────────────┐    ┌──────────────────────┐            │
+│  │ Query Expansion │    │ HyDE (Hypothetical   │            │
+│  │ (3 legal queries│    │ Document Embedding)  │            │
+│  │ via LLM)        │    │ via LLM              │            │
+│  └────────┬────────┘    └──────────┬───────────┘            │
+│           │                        │                         │
+│           ▼                        ▼                         │
+│  ┌─────────────────────────────────────────────┐            │
+│  │     5 Parallel Hybrid Searches               │            │
+│  │  (Vector Cosine Similarity + FTS Keyword)    │            │
+│  │  via hybrid_search_legal_chunks RPC          │            │
+│  └────────────────────┬────────────────────────┘            │
+│                       │                                      │
+│                       ▼                                      │
+│  ┌─────────────────────────────────────────────┐            │
+│  │         Deduplication (by chunk ID)          │            │
+│  └────────────────────┬────────────────────────┘            │
+│                       │                                      │
+│                       ▼                                      │
+│  ┌─────────────────────────────────────────────┐            │
+│  │    LLM Re-ranking (relevance scoring)        │            │
+│  │    Evaluates: applicability, relief,         │            │
+│  │    procedural relevance                      │            │
+│  └────────────────────┬────────────────────────┘            │
+│                       │                                      │
+│                       ▼                                      │
+│              Top 10 Legal Sections                            │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Key RAG Techniques Used
+
+| Technique | Purpose | Impact |
+|-----------|---------|--------|
+| Section-aware chunking | Aligns chunks to legal section boundaries | Precise retrieval |
+| Metadata-enriched embeddings | Prepends "Act, Section, Chapter:" before embedding | +44% similarity scores |
+| Query expansion | LLM reformulates into legal terminology | Broader coverage |
+| HyDE | Generates hypothetical ideal section, embeds that | Bridges semantic gap |
+| Hybrid search | Vector + PostgreSQL full-text keyword matching | Catches exact references |
+| LLM re-ranking | Evaluates actual relevance to the specific case | Precision over recall |
+
 ---
 
 ## Testing
@@ -248,13 +327,26 @@ The project has 220+ tests covering:
 ## How the Pipeline Works (Technical)
 
 1. **User submits** a problem description (50-5000 characters, English or Hindi)
-2. **POST /api/pipeline** creates a session in Supabase, initializes all 5 agents, and starts the orchestrator
-3. **Orchestrator** runs agents sequentially, validating JSON output between each step
-4. **SSE events** stream to the client in real-time (status updates for each agent)
-5. **Shodhak** performs vector similarity search against the legal knowledge base
-6. **Munshi** generates a domain-specific formatted complaint (CDRC/RERA/RTI format)
-7. **Nyayadoot** reviews and scores the document (0-100 across 4 categories)
-8. **Final document** is displayed with quality score, export options, and session persistence
+2. **POST /api/pipeline** creates a session, initializes all 5 agents, and starts the orchestrator
+3. **Arzdar** extracts facts (complainant, respondent, dates, grievance, relief, language)
+4. **Vivechak** classifies the legal domain and selects the forum with confidence scoring
+5. **Shodhak** performs advanced RAG research:
+   - LLM expands the query into 3 legal terminology searches
+   - LLM generates a hypothetical legal section (HyDE) for better embedding match
+   - 5 parallel hybrid searches (vector cosine similarity + PostgreSQL full-text keyword matching)
+   - Results deduplicated across queries
+   - LLM re-ranks top 15 results by actual case relevance (applicability, relief, procedure)
+   - Returns top 10 most relevant legal sections
+6. **Munshi** generates a domain-specific formatted complaint with:
+   - Jurisdiction and pecuniary statement
+   - Limitation period declaration (Section 69)
+   - Proper section citations (Section 2(17) for traders, not Section 83)
+   - Affidavit in prescribed format
+   - List of annexures
+   - Hindi prayer clause (if input was Hindi)
+7. **Nyayadoot** reviews and scores (0-100) across completeness, legal validity, formatting, factual consistency
+8. **SSE events** stream to the client in real-time throughout the pipeline
+9. **Final document** displayed with quality score, PDF export, and session persistence
 
 ---
 
@@ -290,17 +382,22 @@ Default: 5 minutes. Configured in `lib/config.ts`.
 - Currently supports only 3 Indian legal domains (Consumer Protection, RERA, RTI)
 - Quality depends on the LLM model used and the completeness of the knowledge base
 - Hindi input is supported but output documents are generated in English (with Hindi prayer clause where applicable)
+- RAG retrieval quality depends on the legal text corpus coverage
 
 ---
 
 ## Future Roadmap
 
 - [ ] Add more legal domains (Labour Law, Family Law, Criminal Complaints)
-- [ ] Multi-turn conversation for fact gathering
-- [ ] Document revision loop (if quality score < 70, auto-revise)
+- [ ] Multi-turn conversation for fact gathering (Arzdar follow-ups in UI)
+- [ ] Document revision loop (if quality score < 70, auto-revise via Nyayadoot feedback)
+- [ ] Cross-encoder re-ranking for faster, cheaper relevance scoring
+- [ ] Parent-child chunking (retrieve small, return full section context)
+- [ ] Case law integration (IndianKanoon precedents)
 - [ ] Lawyer marketplace integration
 - [ ] Mobile app (React Native)
 - [ ] Regional language output (full Hindi/Marathi complaint generation)
+- [ ] Citation verification (verify every cited section exists in KB)
 
 ---
 

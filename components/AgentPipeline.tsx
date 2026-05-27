@@ -1,6 +1,7 @@
 'use client';
 
 import AgentCard from './AgentCard';
+import { QuillIcon, RoutingIcon, MagnifyingGlassBookIcon, ScrollIcon, ClipboardCheckIcon } from '@/components/icons';
 import type { AgentName, AgentStatus } from '@/lib/agents/base-agent';
 
 export interface AgentState {
@@ -16,6 +17,14 @@ interface AgentPipelineProps {
 }
 
 const PIPELINE_ORDER: AgentName[] = ['Arzdar', 'Vivechak', 'Shodhak', 'Munshi', 'Nyayadoot'];
+
+const AGENT_ICONS: Record<AgentName, React.ReactNode> = {
+  Arzdar: <QuillIcon className="w-4 h-4" />,
+  Vivechak: <RoutingIcon className="w-4 h-4" />,
+  Shodhak: <MagnifyingGlassBookIcon className="w-4 h-4" />,
+  Munshi: <ScrollIcon className="w-4 h-4" />,
+  Nyayadoot: <ClipboardCheckIcon className="w-4 h-4" />,
+};
 
 export default function AgentPipeline({ agents }: AgentPipelineProps) {
   // Ensure agents are rendered in pipeline order
@@ -36,7 +45,7 @@ export default function AgentPipeline({ agents }: AgentPipelineProps) {
           <div className="flex items-center gap-2">
             <div className="h-2 w-24 bg-slate-100 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full transition-all duration-500"
+                className="h-full bg-gradient-to-r from-gold-400 to-emerald-500 rounded-full transition-all duration-500"
                 style={{ width: `${(doneCount / totalCount) * 100}%` }}
               />
             </div>
@@ -53,13 +62,13 @@ export default function AgentPipeline({ agents }: AgentPipelineProps) {
           <div key={agent.name} className="relative flex gap-4 pb-4 last:pb-0">
             {/* Timeline connector */}
             <div className="flex flex-col items-center">
-              {/* Step number circle */}
+              {/* Agent-specific icon circle */}
               <div
-                className={`relative z-10 flex items-center justify-center w-8 h-8 rounded-full text-xs font-bold border-2 transition-all ${
+                className={`relative z-10 flex items-center justify-center w-9 h-9 rounded-full border-2 transition-all ${
                   agent.status === 'Done'
                     ? 'bg-emerald-500 border-emerald-500 text-white'
                     : agent.status === 'Running'
-                    ? 'bg-blue-500 border-blue-500 text-white animate-pulse-ring'
+                    ? 'bg-gold-400 border-gold-400 text-white animate-pulse-ring'
                     : agent.status === 'Error'
                     ? 'bg-red-500 border-red-500 text-white'
                     : 'bg-white border-slate-300 text-slate-400'
@@ -70,14 +79,18 @@ export default function AgentPipeline({ agents }: AgentPipelineProps) {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 ) : (
-                  index + 1
+                  AGENT_ICONS[agent.name]
                 )}
               </div>
-              {/* Vertical line */}
+              {/* Vertical gradient line */}
               {index < orderedAgents.length - 1 && (
                 <div
-                  className={`w-0.5 flex-1 mt-1 transition-colors duration-300 ${
-                    agent.status === 'Done' ? 'bg-emerald-300' : 'bg-slate-200'
+                  className={`w-0.5 flex-1 mt-1 transition-colors duration-500 ${
+                    agent.status === 'Done'
+                      ? 'bg-gradient-to-b from-emerald-400 to-emerald-300'
+                      : agent.status === 'Running'
+                      ? 'bg-gradient-to-b from-gold-400 to-slate-200'
+                      : 'bg-slate-200'
                   }`}
                 />
               )}

@@ -130,7 +130,7 @@ export class PipelineOrchestrator {
 
       // --- Munshi ---
       this.checkTimeout();
-      const munshiResult = await this.executeAgent<MunshiInput, MunshiOutput>(
+      let munshiResult = await this.executeAgent<MunshiInput, MunshiOutput>(
         'Munshi',
         this.agents.munshi,
         {
@@ -146,7 +146,7 @@ export class PipelineOrchestrator {
 
       // --- Nyayadoot ---
       this.checkTimeout();
-      const nyayadootResult = await this.executeAgent<NyayadootInput, NyayadootOutput>(
+      let nyayadootResult = await this.executeAgent<NyayadootInput, NyayadootOutput>(
         'Nyayadoot',
         this.agents.nyayadoot,
         {
@@ -158,22 +158,106 @@ export class PipelineOrchestrator {
       if (!nyayadootResult.success || !nyayadootResult.output) {
         return this.handleAgentFailure('Nyayadoot', nyayadootResult);
       }
-      await this.persistAgentOutput('Nyayadoot', nyayadootResult.output);
+
+      // --- Revision Loop ---
+      let revisions = 0;
+      const MAX_REVISIONS = 2;
+
+      while (
+        nyayadootResult.success &&
+        nyayadootResult.output &&
+        nyayadootResult.output.qualityScore < 75 &&
+        revisions < MAX_REVISIONS
+      ) {
+        revisions++;
+        this.checkTimeout();
+
+        // Emit revising status
+        this.emitEvent({
+          type: 'status_update',
+          agentName: 'Munshi',
+          status: 'Running',
+          summary: `Revising document (attempt ${revisions}/${MAX_REVISIONS}). Score: ${nyayadootResult.output.qualityScore}/100`,
+          timestamp: new Date().toISOString(),
+        });
+
+        // Build revision prompt with issues from Nyayadoot
+        const revisionInput: MunshiInput = {
+          extractedFacts: arzdarResult.output,
+          routing: vivechakResult.output,
+          legalSections: shodhakResult.output,
+        };
+
+        // We re-run Munshi with a revision instruction appended to the problem
+        // by temporarily wrapping the input with revision context
+        const issuesList = nyayadootResult.output.issues
+          .map((issue, i) => `${i + 1}. [${issue.section}] ${issue.deficiencyType}: ${issue.description} → Fix: ${issue.suggestedCorrection}`)
+          .join('\n');
+
+        const revisionPromptInput: MunshiInput = {
+          ...revisionInput,
+          // Attach revision context to extractedFacts as additional context
+          extractedFacts: {
+            ...arzdarResult.output,
+            // Append revision instructions to grievanceSummary so Munshi sees them
+            grievanceSummary: `${arzdarResult.output.grievanceSummary}\n\n--- REVISION INSTRUCTIONS (attempt ${revisions}) ---\nThe previous draft scored ${nyayadootResult.output.qualityScore}/100. Fix ONLY the following issues:\n${issuesList}\n\nPrevious document:\n${munshiResult.output!.complaintDocument}`,
+          },
+        };
+
+        // Re-run Munshi with revision context
+        munshiResult = await this.executeAgent<MunshiInput, MunshiOutput>(
+          'Munshi',
+          this.agents.munshi,
+          revisionPromptInput
+        );
+        if (!munshiResult.success || !munshiResult.output) {
+          return this.handleAgentFailure('Munshi', munshiResult);
+        }
+        await this.persistAgentOutput('Munshi', munshiResult.output);
+
+        // Re-run Nyayadoot on revised document
+        this.checkTimeout();
+        this.emitEvent({
+          type: 'status_update',
+          agentName: 'Nyayadoot',
+          status: 'Running',
+          summary: `Re-reviewing revised document (revision ${revisions})`,
+          timestamp: new Date().toISOString(),
+        });
+
+        nyayadootResult = await this.executeAgent<NyayadootInput, NyayadootOutput>(
+          'Nyayadoot',
+          this.agents.nyayadoot,
+          {
+            complaintDocument: munshiResult.output.complaintDocument,
+            legalDomain: vivechakResult.output.legalDomain,
+            extractedFacts: arzdarResult.output,
+          }
+        );
+        if (!nyayadootResult.success || !nyayadootResult.output) {
+          return this.handleAgentFailure('Nyayadoot', nyayadootResult);
+        }
+      }
+
+      // Persist final Nyayadoot output
+      await this.persistAgentOutput('Nyayadoot', nyayadootResult.output!);
 
       // Mark session complete
       await this.sessionManager.markComplete(this.config.sessionId);
 
       // Emit pipeline complete event
+      const finalScore = nyayadootResult.output!.qualityScore;
+      const revisionNote = revisions > 0 ? ` after ${revisions} revision(s)` : '';
       this.emitEvent({
         type: 'pipeline_complete',
-        summary: `Pipeline completed successfully. Quality score: ${nyayadootResult.output.qualityScore}/100`,
+        summary: `Pipeline completed successfully${revisionNote}. Quality score: ${finalScore}/100`,
         timestamp: new Date().toISOString(),
         data: nyayadootResult.output,
       });
 
       return {
         success: true,
-        output: nyayadootResult.output,
+        output: nyayadootResult.output!,
         timing: this.timing,
       };
     } catch (err: unknown) {

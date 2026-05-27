@@ -82,6 +82,21 @@ export class OpenRouterClient {
 
         if (response.ok) {
           const data = (await response.json()) as ChatCompletionResponse;
+          // Validate the response has the expected structure
+          if (!data || !data.choices || !Array.isArray(data.choices) || data.choices.length === 0) {
+            lastError = {
+              type: 'server_error',
+              statusCode: 200,
+              message: `OpenRouter returned invalid response: missing choices array. Response: ${JSON.stringify(data).substring(0, 200)}`,
+              attemptsUsed: attempt,
+            };
+            if (attempt < maxAttempts) {
+              const delayMs = INITIAL_RETRY_DELAY_MS * Math.pow(2, attempt - 1);
+              await sleep(delayMs);
+              continue;
+            }
+            break;
+          }
           return data;
         }
 

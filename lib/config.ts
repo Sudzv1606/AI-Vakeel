@@ -23,7 +23,7 @@ export interface AppConfig {
 }
 
 function getRequiredEnv(key: string): string {
-  const value = process.env[key];
+  const value = process.env[key]?.trim();
   if (!value) {
     throw new Error(`Missing required environment variable: ${key}`);
   }
@@ -38,7 +38,7 @@ export function loadConfig(): AppConfig {
   return {
     openRouter: {
       apiKey: getRequiredEnv("OPENROUTER_API_KEY"),
-      model: process.env.OPENROUTER_MODEL || "anthropic/claude-3.5-sonnet",
+      model: (process.env.OPENROUTER_MODEL || "anthropic/claude-3.5-sonnet").trim(),
       maxInputTokens: 4096,
       maxOutputTokens: 4096,
       timeoutMs: 60000,
