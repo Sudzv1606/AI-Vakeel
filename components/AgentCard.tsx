@@ -35,6 +35,26 @@ const AGENT_DESCRIPTIONS: Record<AgentName, string> = {
   Nyayadoot: 'Review Agent: Reviews quality & completeness',
 };
 
+function translateError(error: string): string {
+  if (error.includes('schema') || error.includes('Schema')) {
+    return 'Something went wrong processing the document. Please try again.';
+  }
+  if (error.includes('timeout') || error.includes('Timeout')) {
+    return 'The request took too long. Please try again in a moment.';
+  }
+  if (error.includes('empty response')) {
+    return 'No response received. Please try again.';
+  }
+  if (error.includes('Knowledge Base') || error.includes('dependency')) {
+    return 'Legal research service is temporarily unavailable. Please try again later.';
+  }
+  if (error.includes('rate') || error.includes('429')) {
+    return 'Too many requests. Please wait a moment and try again.';
+  }
+  // Default: show a generic message
+  return 'An error occurred. Please try again or contact support.';
+}
+
 export default function AgentCard({ name, status, summary, output, error }: AgentCardProps) {
   const [expanded, setExpanded] = useState(false);
   const config = STATUS_CONFIG[status];
@@ -111,7 +131,7 @@ export default function AgentCard({ name, status, summary, output, error }: Agen
       {/* Error */}
       {status === 'Error' && error && (
         <p className="mt-3 text-sm text-red-600 bg-red-50 rounded-md px-3 py-2 animate-fade-in">
-          {error}
+          {translateError(error)}
         </p>
       )}
 

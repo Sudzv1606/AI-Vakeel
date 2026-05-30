@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import ProblemInput from '@/components/ProblemInput';
 import AgentPipeline from '@/components/AgentPipeline';
 import DocumentViewer from '@/components/DocumentViewer';
@@ -21,15 +21,48 @@ const INITIAL_AGENTS: AgentState[] = [
   { name: 'Nyayadoot', status: 'Waiting' },
 ];
 
+const MAX_DAILY_USES = 5;
+
+function getDailyUsage(): number {
+  if (typeof window === 'undefined') return 0;
+  const today = new Date().toISOString().split('T')[0];
+  const stored = localStorage.getItem('ai_vakeel_usage');
+  if (stored) {
+    try {
+      const { date, count } = JSON.parse(stored);
+      if (date === today) return count;
+    } catch {
+      return 0;
+    }
+  }
+  return 0;
+}
+
+function incrementUsage(): void {
+  if (typeof window === 'undefined') return;
+  const today = new Date().toISOString().split('T')[0];
+  const current = getDailyUsage();
+  localStorage.setItem('ai_vakeel_usage', JSON.stringify({ date: today, count: current + 1 }));
+}
+
 export default function Home() {
   const [agents, setAgents] = useState<AgentState[]>(INITIAL_AGENTS);
   const [finalDocument, setFinalDocument] = useState<string | null>(null);
+  const [editedDocument, setEditedDocument] = useState<string | null>(null);
   const [qualityScore, setQualityScore] = useState<number | undefined>(undefined);
   const [pipelineActive, setPipelineActive] = useState(false);
   const [pipelineCompleted, setPipelineCompleted] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [dailyUsage, setDailyUsage] = useState(0);
 
   const { showWalkthrough, triggerWalkthrough, closeWalkthrough } = useWalkthrough();
+
+  useEffect(() => {
+    setDailyUsage(getDailyUsage());
+  }, []);
+
+  const remainingUses = MAX_DAILY_USES - dailyUsage;
+  const limitReached = remainingUses <= 0;
 
   const handleSSEEvent = useCallback((event: PipelineEvent) => {
     if (event.type === 'status_update' && event.agentName && event.status) {
@@ -78,12 +111,21 @@ export default function Home() {
   const { error: sseError, startPipeline, sessionId } = useSSE(handleSSEEvent);
 
   async function handleSubmit(problemDescription: string) {
+    if (limitReached) {
+      setSubmitError('Daily limit reached. Try again tomorrow.');
+      return;
+    }
+
     setSubmitError('');
     setPipelineActive(true);
     setPipelineCompleted(false);
     setAgents(INITIAL_AGENTS);
     setFinalDocument(null);
+    setEditedDocument(null);
     setQualityScore(undefined);
+
+    incrementUsage();
+    setDailyUsage(getDailyUsage());
 
     await startPipeline(problemDescription);
 
@@ -98,6 +140,7 @@ export default function Home() {
     setPipelineCompleted(false);
     setAgents(INITIAL_AGENTS);
     setFinalDocument(null);
+    setEditedDocument(null);
     setQualityScore(undefined);
     setSubmitError('');
   }
@@ -176,7 +219,21 @@ export default function Home() {
           </a>
 
           {/* Problem Input */}
-          <ProblemInput onSubmit={handleSubmit} disabled={pipelineActive || pipelineCompleted} />
+          <div className="w-full max-w-3xl">
+            {limitReached ? (
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 text-center">
+                <p className="text-amber-800 font-semibold">Daily limit reached. Try again tomorrow.</p>
+                <p className="text-amber-600 text-sm mt-1">Free users can generate up to {MAX_DAILY_USES} documents per day.</p>
+              </div>
+            ) : (
+              <>
+                <ProblemInput onSubmit={handleSubmit} disabled={pipelineActive || pipelineCompleted} />
+                <p className="text-xs text-slate-400 text-center mt-2">
+                  {remainingUses} of {MAX_DAILY_USES} free generations remaining today
+                </p>
+              </>
+            )}
+          </div>
 
           {/* Generate Another button */}
           {pipelineCompleted && (
@@ -215,11 +272,47 @@ export default function Home() {
           {/* Final Document */}
           {finalDocument && (
             <div className="w-full max-w-3xl space-y-6 animate-fade-in">
+              {/* Disclaimer Banner */}
+              <div className="bg-amber-50 border-2 border-amber-300 rounded-xl p-4">
+                <p className="text-sm text-amber-900 font-medium leading-relaxed">
+                  ⚠️ DISCLAIMER: This document is AI-generated and is NOT legal advice. It is not a substitute for consultation with a licensed advocate. Verify all section citations and facts before filing. AI Vakeel is not responsible for any legal consequences of using this document.
+                </p>
+              </div>
+
               <div className="flex items-center justify-between flex-wrap gap-4 bg-white rounded-xl p-5 shadow-legal border border-slate-100">
                 {qualityScore !== undefined && <QualityBadge score={qualityScore} />}
-                <ExportButtons document={finalDocument} sessionId={sessionId || undefined} />
+                <ExportButtons document={editedDocument || finalDocument} sessionId={sessionId || undefined} />
               </div>
-              <DocumentViewer document={finalDocument} qualityScore={qualityScore} />
+              <DocumentViewer document={finalDocument} qualityScore={qualityScore} onDocumentEdit={(doc) => setEditedDocument(doc)} />
+            </div>
+          )}
+
+          {/* What to Do Next */}
+          {finalDocument && (
+            <div className="w-full max-w-3xl bg-white rounded-xl p-6 shadow-card border border-slate-100">
+              <h3 className="text-lg font-bold text-navy-900 mb-4">What to Do Next</h3>
+              <ol className="space-y-3 text-sm text-slate-700">
+                <li className="flex gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-gold-400/10 rounded-full flex items-center justify-center text-gold-500 font-bold text-xs">1</span>
+                  <span><strong>Review the document</strong> carefully. Fill in any [TO BE PROVIDED] fields with your actual details (address, parent&apos;s name, age).</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-gold-400/10 rounded-full flex items-center justify-center text-gold-500 font-bold text-xs">2</span>
+                  <span><strong>Consult a lawyer</strong> (recommended). Show the document to a licensed advocate for verification before filing.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-gold-400/10 rounded-full flex items-center justify-center text-gold-500 font-bold text-xs">3</span>
+                  <span><strong>File the complaint.</strong> Consumer complaints: file at <a href="https://edaakhil.nic.in" target="_blank" rel="noopener noreferrer" className="text-gold-500 underline">e-Daakhil portal</a> or your local District Commission. RERA: file at your state RERA portal. RTI: file at <a href="https://rtionline.gov.in" target="_blank" rel="noopener noreferrer" className="text-gold-500 underline">rtionline.gov.in</a> or by post.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-gold-400/10 rounded-full flex items-center justify-center text-gold-500 font-bold text-xs">4</span>
+                  <span><strong>Pay the filing fee.</strong> Consumer Commission: Rs 100-500 depending on claim. RERA: Rs 1,000-5,000 depending on state. RTI: Rs 10.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-gold-400/10 rounded-full flex items-center justify-center text-gold-500 font-bold text-xs">5</span>
+                  <span><strong>Attach annexures.</strong> Print the complaint, attach all supporting documents (invoice, screenshots, correspondence), and submit.</span>
+                </li>
+              </ol>
             </div>
           )}
         </div>

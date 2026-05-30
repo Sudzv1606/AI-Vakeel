@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Vakeel — Pitch Deck</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --bg-card: #111115;
+    --gold: #c9a84c;
+    --gold-light: #e8d48b;
+    --cream: #f5f0e8;
+    --text: #e8e4dc;
+    --text-dim: #8a8578;
+    --accent: #8b2500;
+    --border: rgba(201, 168, 76, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Sans 3', sans-serif;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .slide {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Grain texture overlay */
+  .slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  .slide-content {
+    max-width: 1100px;
+    width: 90%;
+    padding: 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ===== SLIDE 1: TITLE ===== */
+  .slide-title {
+    background: radial-gradient(ellipse at 30% 50%, rgba(201, 168, 76, 0.08) 0%, transparent 60%);
+  }
+
+  .slide-title .slide-content {
+    text-align: center;
+  }
+
+  .logo-mark {
+    font-size: 14px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 1s 0.3s forwards;
+  }
+
+  .main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(80px, 12vw, 160px);
+    line-height: 0.9;
+    color: var(--cream);
+    letter-spacing: -2px;
+    opacity: 0;
+    animation: fadeUp 1s 0.5s forwards;
+  }
+
+  .main-title span {
+    color: var(--gold);
+  }
+
+  .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 28px);
+    color: var(--text-dim);
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: fadeUp 1s 0.8s forwards;
+  }
+
+  .tagline {
+    font-size: 16px;
+    color: var(--gold-light);
+    margin-top: 50px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeUp 1s 1.1s forwards;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 40px auto 0;
+    opacity: 0;
+    animation: fadeUp 1s 1.3s forwards;
+  }
+
+  .hackathon-badge {
+    margin-top: 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    opacity: 0;
+    animation: fadeUp 1s 1.5s forwards;
+  }
+
+  /* ===== SLIDE 2: PROBLEM ===== */
+  .slide-problem {
+    background: linear-gradient(135deg, rgba(139, 37, 0, 0.1) 0%, transparent 50%);
+  }
+
+  .slide-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .slide-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 50px;
+  }
+
+  .slide-heading em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .problem-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 35px;
+    position: relative;
+    transition: transform 0.4s, border-color 0.4s;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+  }
+
+  .problem-card::before {
+    content: attr(data-number);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: rgba(201, 168, 76, 0.08);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    line-height: 1;
+  }
+
+  .problem-stat {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .problem-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dim);
+  }
+
+  .problem-text strong {
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  /* ===== SLIDE 3: SOLUTION ===== */
+  .slide-solution {
+    background: radial-gradient(ellipse at 70% 30%, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+  }
+
+  .solution-flow {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .flow-step {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    position: relative;
+  }
+
+  .flow-step::after {
+    content: '→';
+    position: absolute;
+    right: -18px;
+    top: 30px;
+    font-size: 24px;
+    color: var(--gold);
+  }
+
+  .flow-step:last-child::after {
+    display: none;
+  }
+
+  .flow-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 28px;
+  }
+
+  .flow-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .flow-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  .agents-section {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .agents-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--gold-light);
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .agents-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+
+  .agent-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 20px 15px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .agent-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+
+  .agent-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 5px;
+  }
+
+  .agent-role {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+
+  .agent-desc {
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  /* ===== SLIDE 4: TECH STACK ===== */
+  .slide-tech {
+    background: linear-gradient(225deg, rgba(201, 168, 76, 0.05) 0%, transparent 50%);
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .tech-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+
+  .tech-card:hover {
+    border-color: var(--gold);
+  }
+
+  .tech-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+
+  .tech-card:hover::after {
+    transform: scaleX(1);
+  }
+
+  .tech-layer {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 15px;
+  }
+
+  .tech-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+
+  .tech-detail {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .rag-highlight {
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--gold);
+    text-align: center;
+  }
+
+  .rag-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 15px;
+  }
+
+  .rag-flow {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: var(--cream);
+    letter-spacing: 1px;
+  }
+
+  .rag-flow span {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  /* ===== SLIDE 5: AUDIENCE ===== */
+  .slide-audience {
+    background: radial-gradient(ellipse at 50% 80%, rgba(139, 37, 0, 0.08) 0%, transparent 60%);
+  }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .audience-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 35px 30px;
+    transition: all 0.4s;
+    position: relative;
+  }
+
+  .audience-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+  }
+
+  .audience-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .audience-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .audience-desc {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .audience-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 4px 12px;
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .market-stat {
+    margin-top: 50px;
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .market-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 90px);
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .market-label {
+    font-size: 16px;
+    color: var(--text-dim);
+    margin-top: 10px;
+  }
+
+  /* ===== NAVIGATION ===== */
+  .nav-dots {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+  }
+
+  .nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--text-dim);
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+  }
+
+  .nav-dot:hover, .nav-dot.active {
+    opacity: 1;
+    background: var(--gold);
+    transform: scale(1.3);
+  }
+
+  /* ===== PAGE COUNTER ===== */
+  .page-counter {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: var(--text-dim);
+    z-index: 1000;
+  }
+
+  .page-counter .current {
+    color: var(--gold);
+    font-size: 28px;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-content > * {
+    opacity: 0;
+    animation: fadeUp 0.8s forwards;
+  }
+
+  .slide-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .slide-content > *:nth-child(2) { animation-delay: 0.2s; }
+  .slide-content > *:nth-child(3) { animation-delay: 0.3s; }
+  .slide-content > *:nth-child(4) { animation-delay: 0.4s; }
+  .slide-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .slide-content {
+      padding: 40px 25px;
+    }
+
+    .problem-grid,
+    .tech-grid,
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .agents-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-step::after {
+      display: none;
+    }
+
+    .solution-flow {
+      flex-direction: column;
+    }
+
+    .nav-dots {
+      right: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation Dots -->
+<nav class="nav-dots">
+  <button class="nav-dot active" onclick="scrollToSlide(0)"></button>
+  <button class="nav-dot" onclick="scrollToSlide(1)"></button>
+  <button class="nav-dot" onclick="scrollToSlide(2)"></button>
+  <button class="nav-dot" onclick="scrollToSlide(3)"></button>
+  <button class="nav-dot" onclick="scrollToSlide(4)"></button>
+</nav>
+
+<!-- Page Counter -->
+<div class="page-counter">
+  <span class="current">01</span> / 05
+</div>
+
+<!-- SLIDE 1: TITLE -->
+<section class="slide slide-title">
+  <div class="slide-content">
+    <div class="logo-mark">OpenAI × Outskill Hackathon</div>
+    <h1 class="main-title">AI <span>Vakeel</span></h1>
+    <p class="subtitle">AI-Powered Indian Legal Complaint Generator</p>
+    <p class="tagline">From grievance to legal document — in seconds, not days.</p>
+    <div class="divider-line"></div>
+    <p class="hackathon-badge">Multi-Agent Swarm Architecture</p>
+  </div>
+</section>
+
+<!-- SLIDE 2: PROBLEM -->
+<section class="slide slide-problem">
+  <div class="slide-content">
+    <div class="slide-label">01 — The Problem</div>
+    <h2 class="slide-heading">Legal access in India<br>is <em>broken.</em></h2>
+    <div class="problem-grid">
+      <div class="problem-card" data-number="01">
+        <div class="problem-stat">₹5K–₹20K+</div>
+        <p class="problem-text"><strong>Lawyers are expensive.</strong> Just to draft a complaint — putting justice out of reach for millions of Indians.</p>
+      </div>
+      <div class="problem-card" data-number="02">
+        <div class="problem-stat">90%+</div>
+        <p class="problem-text"><strong>Never file a complaint.</strong> Citizens don't know which law applies, which forum to approach, or how to cite sections.</p>
+      </div>
+      <div class="problem-card" data-number="03">
+        <div class="problem-stat">Weeks</div>
+        <p class="problem-text"><strong>The process is slow.</strong> Finding the right sections, drafting in proper format, and getting review takes days or weeks.</p>
+      </div>
+      <div class="problem-card" data-number="04">
+        <div class="problem-stat">40M+</div>
+        <p class="problem-text"><strong>Pending cases in Indian courts.</strong> A massive gap between legal need and legal access for 1.4 billion people.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3: SOLUTION -->
+<section class="slide slide-solution">
+  <div class="slide-content">
+    <div class="slide-label">02 — Solution & User Journey</div>
+    <h2 class="slide-heading">Describe → AI Processes → <em>Get Your Complaint</em></h2>
+    <div class="solution-flow">
+      <div class="flow-step">
+        <div class="flow-icon">✍️</div>
+        <div class="flow-label">Describe</div>
+        <div class="flow-desc">User describes their problem in plain English or Hindi</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">⚙️</div>
+        <div class="flow-label">Process</div>
+        <div class="flow-desc">5 AI agents work in sequence — facts, classification, research, drafting, review</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">📄</div>
+        <div class="flow-label">Receive</div>
+        <div class="flow-desc">Ready-to-file complaint with quality score & PDF export</div>
+      </div>
+    </div>
+    <div class="agents-section">
+      <div class="agents-title">Meet the "Vakeel Panch" — 5 AI Agents</div>
+      <div class="agents-grid">
+        <div class="agent-card">
+          <div class="agent-name">Arzdar</div>
+          <div class="agent-role">Intake</div>
+          <div class="agent-desc">Extracts key facts from natural language</div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-name">Vivechak</div>
+          <div class="agent-role">Router</div>
+          <div class="agent-desc">Classifies case & selects correct forum</div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-name">Shodhak</div>
+          <div class="agent-role">Research</div>
+          <div class="agent-desc">Advanced RAG with hybrid search & re-ranking</div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-name">Munshi</div>
+          <div class="agent-role">Draft</div>
+          <div class="agent-desc">Generates formatted complaint with affidavit</div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-name">Nyayadoot</div>
+          <div class="agent-role">Review</div>
+          <div class="agent-desc">Scores document quality 0–100</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4: TECH STACK -->
+<section class="slide slide-tech">
+  <div class="slide-content">
+    <div class="slide-label">03 — Tech Stack</div>
+    <h2 class="slide-heading">Built for <em>performance</em> & precision</h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-layer">Frontend</div>
+        <div class="tech-name">Next.js 15</div>
+        <div class="tech-detail">App Router, React 19, TypeScript, Tailwind CSS, SSE real-time streaming</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-layer">AI / LLM</div>
+        <div class="tech-name">OpenRouter</div>
+        <div class="tech-detail">Claude 3.5 Sonnet / GPT-4o, multi-agent swarm architecture with structured outputs</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-layer">Database</div>
+        <div class="tech-name">Supabase</div>
+        <div class="tech-detail">PostgreSQL + pgvector for semantic search, Row Level Security, Auth</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-layer">RAG Pipeline</div>
+        <div class="tech-name">Advanced Search</div>
+        <div class="tech-detail">Query expansion, HyDE, hybrid vector+keyword search, LLM re-ranking</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-layer">Testing</div>
+        <div class="tech-name">Vitest</div>
+        <div class="tech-detail">220+ tests with fast-check property-based testing for reliability</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-layer">Backend</div>
+        <div class="tech-name">API Routes</div>
+        <div class="tech-detail">Next.js server functions with pipeline orchestration & session management</div>
+      </div>
+    </div>
+    <div class="rag-highlight">
+      <div class="rag-label">RAG Pipeline Architecture</div>
+      <div class="rag-flow">
+        <span>Query Expansion</span> → <span>HyDE</span> → <span>Hybrid Search</span> → <span>LLM Re-ranking</span> → Top 10 Legal Sections
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5: AUDIENCE -->
+<section class="slide slide-audience">
+  <div class="slide-content">
+    <div class="slide-label">04 — Target Audience</div>
+    <h2 class="slide-heading">Everyday Indians <em>deserving justice</em></h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon">🛒</div>
+        <div class="audience-title">Consumers</div>
+        <div class="audience-desc">Defective products, poor services, e-commerce disputes — Consumer Protection Act</div>
+        <span class="audience-tag">Primary</span>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🏠</div>
+        <div class="audience-title">Homebuyers</div>
+        <div class="audience-desc">Builder delays, RERA violations, possession issues — Real Estate Regulatory Authority</div>
+        <span class="audience-tag">Primary</span>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">📋</div>
+        <div class="audience-title">Citizens & Activists</div>
+        <div class="audience-desc">Government transparency, information requests — Right to Information Act</div>
+        <span class="audience-tag">Primary</span>
+      </div>
+    </div>
+    <div class="market-stat">
+      <div class="market-number">1.4B</div>
+      <div class="market-label">People. 40M+ pending cases. A massive gap between legal need and legal access.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.nav-dot');
+  const counter = document.querySelector('.page-counter .current');
+
+  function scrollToSlide(index) {
+    slides[index].scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const index = Array.from(slides).indexOf(entry.target);
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+        counter.textContent = String(index + 1).padStart(2, '0');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  slides.forEach(slide => observer.observe(slide));
+</script>
+</body>
+</html>

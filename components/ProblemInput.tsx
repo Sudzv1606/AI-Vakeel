@@ -11,6 +11,14 @@ interface ProblemInputProps {
 const MIN_LENGTH = 50;
 const MAX_LENGTH = 5000;
 
+const SAMPLE_PROBLEMS = [
+  `My name is Rahul Sharma and I purchased a Samsung Galaxy S24 Ultra mobile phone from Flipkart on 5th March 2024 for Rs 1,29,999. Within 10 days the phone started overheating badly and the screen developed green lines. I contacted Flipkart customer care on 16th March and they refused to replace it saying it was physical damage, which is completely false. I have the unboxing video as proof. Samsung service center confirmed it is a manufacturing defect. I want a full refund of Rs 1,29,999 and Rs 25,000 compensation for mental harassment.`,
+  `I am Priya Patel and I booked a 3BHK flat in Prestige Lakeside Habitat project in Whitefield, Bangalore, Karnataka from Prestige Constructions Ltd in January 2021. The agreement said possession by December 2023. I paid Rs 95 lakhs total including registration. It is now 2026 and there is no possession, the project is only 60% complete. The builder keeps giving false promises every quarter. RERA registration number is PRM/KA/RERA/1251/2020. I want either immediate possession or full refund with 12% interest from the date of each payment, plus Rs 5 lakhs compensation for rent I have been paying.`,
+  `I am Amit Verma, resident of Sector 15, Noida, Uttar Pradesh. I want to know how much money was allocated and spent by the Noida Authority on road repair and maintenance in Sector 15 during the financial year 2023-2024. The roads in our sector are in terrible condition despite multiple complaints. I want copies of all work orders issued, contractor details, bills paid, and completion certificates for road work in Sector 15 from April 2023 to March 2024. I prefer to receive this information by email at amit.verma@email.com.`,
+  `My name is Neha Singh and I bought a Whirlpool washing machine from Amazon on 10th January 2025 for Rs 32,000. After just 3 washes the drum started making loud grinding noises and water started leaking from the bottom. I raised a return request on 15th January but Amazon rejected it saying the return window has passed. The product has 2 year warranty. Whirlpool service center visited on 20th January and said the motor is defective from factory. I want full refund plus Rs 10,000 compensation for the water damage to my bathroom floor.`,
+  `Maine M/s Skyline Developers se Lucknow mein Skyline Heights project mein flat kharida tha. Agreement 10 March 2023 ko hua tha, possession December 2025 tak dena tha. Maine 45 lakh rupee pay kar diye hain. Abhi tak possession nahi mila. Builder bol raha hai 6 mahine aur lagenge. Mujhe flat chahiye aur har mahine ka penalty bhi. RERA registration number UPREAPRJ12345 hai. Mera naam Rajesh Kumar hai aur main Lucknow mein rehta hoon.`,
+];
+
 export default function ProblemInput({ onSubmit, disabled = false }: ProblemInputProps) {
   const [text, setText] = useState('');
   const [validationMessage, setValidationMessage] = useState('');
@@ -99,12 +107,26 @@ export default function ProblemInput({ onSubmit, disabled = false }: ProblemInpu
           />
         </div>
 
-        {/* Tip helper text */}
-        <div className="mt-3 flex items-start gap-2">
-          <span className="text-amber-500 text-sm mt-0.5">💡</span>
-          <p className="text-xs text-slate-500 leading-relaxed">
-            <span className="font-medium text-slate-600">Tip:</span> Include specific dates, names of parties involved, amounts (if any), and the relief you seek for the best results.
-          </p>
+        {/* Try a sample button */}
+        <div className="mt-3 flex items-center gap-3">
+          <button
+            onClick={() => {
+              const randomIndex = Math.floor(Math.random() * SAMPLE_PROBLEMS.length);
+              setText(SAMPLE_PROBLEMS[randomIndex]);
+              setValidationMessage('');
+            }}
+            disabled={disabled}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-gold-700 bg-gold-50 border border-gold-300/50 rounded-lg hover:bg-gold-100 hover:border-gold-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            aria-label="Fill with a sample legal problem"
+          >
+            <span>✨</span> Try a sample
+          </button>
+          <div className="flex items-start gap-2">
+            <span className="text-amber-500 text-sm mt-0.5">💡</span>
+            <p className="text-xs text-slate-500 leading-relaxed">
+              <span className="font-medium text-slate-600">Tip:</span> Include specific dates, names of parties involved, amounts (if any), and the relief you seek for the best results.
+            </p>
+          </div>
         </div>
 
         {/* Footer */}

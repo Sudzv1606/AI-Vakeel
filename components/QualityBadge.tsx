@@ -101,6 +101,13 @@ export default function QualityBadge({ score }: QualityBadgeProps) {
         <span className="text-[10px] text-slate-400 mt-0.5">
           Verified by Nyayadoot
         </span>
+        <span className={`text-[11px] mt-1 leading-tight ${config.text} opacity-80`}>
+          {clampedScore >= 70
+            ? 'Document has all required legal elements. Ready for review by an advocate.'
+            : clampedScore >= 50
+            ? 'Some elements may be missing. Review the issues below before filing.'
+            : 'Document needs significant revision. Consider regenerating with more details.'}
+        </span>
       </div>
     </div>
   );

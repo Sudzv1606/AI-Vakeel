@@ -54,6 +54,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Rate limiting: max 10 sessions per user per day
+    const supabaseRateCheck = createClient(config.supabase.url, config.supabase.serviceRoleKey);
+    const todayStart = new Date();
+    todayStart.setHours(0, 0, 0, 0);
+    const { count: todayCount } = await supabaseRateCheck
+      .from('sessions')
+      .select('*', { count: 'exact', head: true })
+      .eq('user_id', user.id)
+      .gte('created_at', todayStart.toISOString());
+
+    if (todayCount !== null && todayCount >= 10) {
+      return NextResponse.json(
+        { error: 'Daily limit reached. You can generate up to 10 documents per day. Try again tomorrow.' },
+        { status: 429 }
+      );
+    }
+
     // Create Supabase client (service role for DB operations)
     const supabase = createClient(config.supabase.url, config.supabase.serviceRoleKey);
 
