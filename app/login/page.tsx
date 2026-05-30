@@ -1,17 +1,30 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { createSupabaseBrowserClient } from '@/lib/supabase/client';
 
 export default function LoginPage() {
+  return (
+    <Suspense>
+      <LoginForm />
+    </Suspense>
+  );
+}
+
+function LoginForm() {
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isSignUp, setIsSignUp] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(searchParams.get('mode') === 'signup');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
   const router = useRouter();
+
+  useEffect(() => {
+    setIsSignUp(searchParams.get('mode') === 'signup');
+  }, [searchParams]);
 
   const supabase = createSupabaseBrowserClient();
 
@@ -147,9 +160,11 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => {
-                  setIsSignUp(!isSignUp);
+                  const newMode = !isSignUp;
+                  setIsSignUp(newMode);
                   setError('');
                   setMessage('');
+                  router.push(newMode ? '/login?mode=signup' : '/login');
                 }}
                 className="text-sm text-slate-500 hover:text-amber-600 transition-colors"
               >
